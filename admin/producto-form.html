@@ -5,88 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nuevo producto · Administración · ArtCrate</title>
   <meta name="description" content="Formulario para agregar o editar un producto del catálogo.">
+  <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/estilos.css">
 </head>
 <body>
-  <header>
-    <p class="marca">
-      <a href="index.html"><img src="../assets/img/logo.svg" alt="ArtCrate" width="150" height="40"></a>
-      <span>Administración</span>
-    </p>
-    <nav aria-label="Navegación de administración">
-      <ul>
-        <li><a href="index.html">Panel</a></li>
-        <li><a href="productos.html">Productos</a></li>
-        <li><a href="producto-form.html" aria-current="page">Nuevo producto</a></li>
-        <li><a href="pedidos.html">Pedidos</a></li>
-      </ul>
+  <header class="acr-navbar acr-admin-header">
+    <nav class="navbar navbar-expand-md" aria-label="Navegación de administración">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="../assets/img/logo.svg" alt="ArtCrate" width="150" height="40">
+          <span class="acr-admin-badge">Administración</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navAdmin" aria-controls="navAdmin" aria-expanded="false" aria-label="Abrir navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navAdmin">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Panel</a></li>
+          <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link active" href="producto-form.html" aria-current="page">Nuevo producto</a></li>
+          <li class="nav-item"><a class="nav-link" href="pedidos.html">Pedidos</a></li>
+            <li class="nav-item"><a class="nav-link" href="../index.html">Volver a la tienda</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <p><a href="../index.html">Volver a la tienda</a></p>
   </header>
 
-  <main>
-    <h1>Agregar producto</h1>
+  <main class="container my-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h1 class="mb-4">Agregar producto</h1>
 
-    <form action="productos.html" method="post">
-      <div>
-        <label for="p-nombre">Nombre del producto</label>
-        <input type="text" id="p-nombre" name="nombre" required>
+        <form action="productos.html" method="post">
+          <div class="mb-3">
+            <label for="p-nombre" class="form-label">Nombre del producto</label>
+            <input type="text" class="form-control" id="p-nombre" name="nombre" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="p-descripcion" class="form-label">Descripción</label>
+            <textarea class="form-control" id="p-descripcion" name="descripcion" rows="4"></textarea>
+          </div>
+
+          <div class="row g-3 mb-3">
+            <div class="col-sm-6">
+              <label for="p-categoria" class="form-label">Categoría</label>
+              <select class="form-select" id="p-categoria" name="categoria" required>
+                <option value="">Selecciona una categoría</option>
+                <option value="pinturas">Pinturas</option>
+                <option value="lienzos">Lienzos y soportes</option>
+                <option value="cuadernos">Cuadernos de dibujo</option>
+                <option value="pinceles">Pinceles y accesorios</option>
+              </select>
+            </div>
+            <div class="col-sm-6">
+              <label for="p-marca" class="form-label">Marca / proveedor</label>
+              <input type="text" class="form-control" id="p-marca" name="marca" required>
+            </div>
+          </div>
+
+          <div class="row g-3 mb-3">
+            <div class="col-sm-6">
+              <label for="p-precio" class="form-label">Precio (CLP)</label>
+              <input type="number" class="form-control" id="p-precio" name="precio" min="0" step="10" required>
+            </div>
+            <div class="col-sm-6">
+              <label for="p-stock" class="form-label">Stock disponible</label>
+              <input type="number" class="form-control" id="p-stock" name="stock" min="0" required>
+            </div>
+          </div>
+
+          <fieldset>
+            <legend>Variantes</legend>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="p-color" class="form-label">Color</label>
+                <input type="text" class="form-control" id="p-color" name="color" placeholder="Ej: Rojo Cadmio">
+              </div>
+              <div class="col-sm-6">
+                <label for="p-formato" class="form-label">Formato / tamaño</label>
+                <input type="text" class="form-control" id="p-formato" name="formato" placeholder="Ej: 60 ml">
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="mb-4">
+            <label for="p-imagen" class="form-label">Imagen del producto</label>
+            <input type="file" class="form-control" id="p-imagen" name="imagen" accept="image/*">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Guardar producto</button>
+        </form>
       </div>
-
-      <div>
-        <label for="p-descripcion">Descripción</label>
-        <textarea id="p-descripcion" name="descripcion" rows="4"></textarea>
-      </div>
-
-      <div>
-        <label for="p-categoria">Categoría</label>
-        <select id="p-categoria" name="categoria" required>
-          <option value="">Selecciona una categoría</option>
-          <option value="pinturas">Pinturas</option>
-          <option value="lienzos">Lienzos y soportes</option>
-          <option value="cuadernos">Cuadernos de dibujo</option>
-          <option value="pinceles">Pinceles y accesorios</option>
-        </select>
-      </div>
-
-      <div>
-        <label for="p-marca">Marca / proveedor</label>
-        <input type="text" id="p-marca" name="marca" required>
-      </div>
-
-      <div>
-        <label for="p-precio">Precio (CLP)</label>
-        <input type="number" id="p-precio" name="precio" min="0" step="10" required>
-      </div>
-
-      <div>
-        <label for="p-stock">Stock disponible</label>
-        <input type="number" id="p-stock" name="stock" min="0" required>
-      </div>
-
-      <fieldset>
-        <legend>Variantes</legend>
-        <div>
-          <label for="p-color">Color</label>
-          <input type="text" id="p-color" name="color" placeholder="Ej: Rojo Cadmio">
-        </div>
-        <div>
-          <label for="p-formato">Formato / tamaño</label>
-          <input type="text" id="p-formato" name="formato" placeholder="Ej: 60 ml">
-        </div>
-      </fieldset>
-
-      <div>
-        <label for="p-imagen">Imagen del producto</label>
-        <input type="file" id="p-imagen" name="imagen" accept="image/*">
-      </div>
-
-      <button type="submit">Guardar producto</button>
-    </form>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2026 ArtCrate. Panel de administración — proyecto académico Desarrollo Fullstack 2.</p>
+  <footer class="acr-footer py-3">
+    <div class="container">
+      <p class="acr-derechos mb-0">&copy; 2026 ArtCrate. Panel de administración — proyecto académico Desarrollo Fullstack 2.</p>
+    </div>
   </footer>
 
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

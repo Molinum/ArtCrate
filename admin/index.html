@@ -5,41 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Panel · Administración · ArtCrate</title>
   <meta name="description" content="Panel de administración de ArtCrate.">
+  <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/estilos.css">
 </head>
 <body>
-  <header>
-    <p class="marca">
-      <a href="index.html"><img src="../assets/img/logo.svg" alt="ArtCrate" width="150" height="40"></a>
-      <span>Administración</span>
-    </p>
-    <nav aria-label="Navegación de administración">
-      <ul>
-        <li><a href="index.html" aria-current="page">Panel</a></li>
-        <li><a href="productos.html">Productos</a></li>
-        <li><a href="producto-form.html">Nuevo producto</a></li>
-        <li><a href="pedidos.html">Pedidos</a></li>
-      </ul>
+  <header class="acr-navbar acr-admin-header">
+    <nav class="navbar navbar-expand-md" aria-label="Navegación de administración">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="../assets/img/logo.svg" alt="ArtCrate" width="150" height="40">
+          <span class="acr-admin-badge">Administración</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navAdmin" aria-controls="navAdmin" aria-expanded="false" aria-label="Abrir navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navAdmin">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Panel</a></li>
+          <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="producto-form.html">Nuevo producto</a></li>
+          <li class="nav-item"><a class="nav-link" href="pedidos.html">Pedidos</a></li>
+            <li class="nav-item"><a class="nav-link" href="../index.html">Volver a la tienda</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <p><a href="../index.html">Volver a la tienda</a></p>
   </header>
 
-  <main>
-    <h1>Panel de administración</h1>
-    <p>Desde aquí se gestionan el catálogo, el stock y los pedidos de la tienda.</p>
+  <main class="container my-4">
+    <h1 class="mb-3">Panel de administración</h1>
+    <p class="text-body-secondary">Desde aquí se gestionan el catálogo, el stock y los pedidos de la tienda.</p>
 
     <section aria-labelledby="accesos-titulo">
-      <h2 id="accesos-titulo">Accesos rápidos</h2>
-      <ul>
-        <li><a href="productos.html">Ver listado de productos</a></li>
-        <li><a href="producto-form.html">Agregar un producto nuevo</a></li>
-        <li><a href="pedidos.html">Revisar pedidos recientes</a></li>
-      </ul>
+      <h2 id="accesos-titulo" class="h5 mb-3">Accesos rápidos</h2>
+      <div class="row row-cols-1 row-cols-sm-3 g-3">
+        <div class="col">
+          <a class="btn btn-outline-secondary w-100 py-3" href="productos.html">Ver listado de productos</a>
+        </div>
+        <div class="col">
+          <a class="btn btn-outline-secondary w-100 py-3" href="producto-form.html">Agregar un producto nuevo</a>
+        </div>
+        <div class="col">
+          <a class="btn btn-outline-secondary w-100 py-3" href="pedidos.html">Revisar pedidos recientes</a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 ArtCrate. Panel de administración — proyecto académico Desarrollo Fullstack 2.</p>
+  <footer class="acr-footer py-3">
+    <div class="container">
+      <p class="acr-derechos mb-0">&copy; 2026 ArtCrate. Panel de administración — proyecto académico Desarrollo Fullstack 2.</p>
+    </div>
   </footer>
 
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

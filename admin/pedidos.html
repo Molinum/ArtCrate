@@ -5,71 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pedidos · Administración · ArtCrate</title>
   <meta name="description" content="Listado de pedidos realizados por los clientes de ArtCrate.">
+  <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/estilos.css">
 </head>
 <body>
-  <header>
-    <p class="marca">
-      <a href="index.html"><img src="../assets/img/logo.svg" alt="ArtCrate" width="150" height="40"></a>
-      <span>Administración</span>
-    </p>
-    <nav aria-label="Navegación de administración">
-      <ul>
-        <li><a href="index.html">Panel</a></li>
-        <li><a href="productos.html">Productos</a></li>
-        <li><a href="producto-form.html">Nuevo producto</a></li>
-        <li><a href="pedidos.html" aria-current="page">Pedidos</a></li>
-      </ul>
+  <header class="acr-navbar acr-admin-header">
+    <nav class="navbar navbar-expand-md" aria-label="Navegación de administración">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="../assets/img/logo.svg" alt="ArtCrate" width="150" height="40">
+          <span class="acr-admin-badge">Administración</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navAdmin" aria-controls="navAdmin" aria-expanded="false" aria-label="Abrir navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navAdmin">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Panel</a></li>
+          <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="producto-form.html">Nuevo producto</a></li>
+          <li class="nav-item"><a class="nav-link active" href="pedidos.html" aria-current="page">Pedidos</a></li>
+            <li class="nav-item"><a class="nav-link" href="../index.html">Volver a la tienda</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <p><a href="../index.html">Volver a la tienda</a></p>
   </header>
 
-  <main>
-    <h1>Pedidos</h1>
+  <main class="container my-4">
+    <h1 class="mb-4">Pedidos</h1>
 
-    <table>
-      <caption>Pedidos recientes</caption>
-      <thead>
-        <tr>
-          <th scope="col">N° pedido</th>
-          <th scope="col">Cliente</th>
-          <th scope="col">Fecha</th>
-          <th scope="col">Total</th>
-          <th scope="col">Estado</th>
-          <th scope="col"><span>Acciones</span></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">ORD-1042</th>
-          <td>Javiera Rojas</td>
-          <td>22-09-2026</td>
-          <td>$21.470</td>
-          <td>Preparando</td>
-          <td><a href="pedidos.html">Ver detalle</a></td>
-        </tr>
-        <tr>
-          <th scope="row">ORD-1041</th>
-          <td>Matías Fuentes</td>
-          <td>21-09-2026</td>
-          <td>$12.990</td>
-          <td>Enviado</td>
-          <td><a href="pedidos.html">Ver detalle</a></td>
-        </tr>
-        <tr>
-          <th scope="row">ORD-1040</th>
-          <td>Camila Soto</td>
-          <td>19-09-2026</td>
-          <td>$34.960</td>
-          <td>Entregado</td>
-          <td><a href="pedidos.html">Ver detalle</a></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-responsive">
+      <table class="table align-middle">
+        <caption>Pedidos recientes</caption>
+        <thead>
+          <tr>
+            <th scope="col">N&deg; pedido</th>
+            <th scope="col">Cliente</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Total</th>
+            <th scope="col">Estado</th>
+            <th scope="col"><span>Acciones</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">ORD-1042</th>
+            <td>Javiera Rojas</td>
+            <td>22-09-2026</td>
+            <td>$21.470</td>
+            <td><span class="badge text-bg-secondary">Preparando</span></td>
+            <td><a class="btn btn-outline-secondary btn-sm" href="pedidos.html">Ver detalle</a></td>
+          </tr>
+          <tr>
+            <th scope="row">ORD-1041</th>
+            <td>Matías Fuentes</td>
+            <td>21-09-2026</td>
+            <td>$12.990</td>
+            <td><span class="badge" style="background-color: var(--acr-oliva);">Enviado</span></td>
+            <td><a class="btn btn-outline-secondary btn-sm" href="pedidos.html">Ver detalle</a></td>
+          </tr>
+          <tr>
+            <th scope="row">ORD-1040</th>
+            <td>Camila Soto</td>
+            <td>19-09-2026</td>
+            <td>$34.960</td>
+            <td><span class="badge" style="background-color: var(--acr-terracota-oscuro);">Entregado</span></td>
+            <td><a class="btn btn-outline-secondary btn-sm" href="pedidos.html">Ver detalle</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2026 ArtCrate. Panel de administración — proyecto académico Desarrollo Fullstack 2.</p>
+  <footer class="acr-footer py-3">
+    <div class="container">
+      <p class="acr-derechos mb-0">&copy; 2026 ArtCrate. Panel de administración — proyecto académico Desarrollo Fullstack 2.</p>
+    </div>
   </footer>
 
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
