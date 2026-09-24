@@ -5,116 +5,142 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio · ArtCrate</title>
   <meta name="description" content="Tienda de materiales de arte: pinturas, lienzos, cuadernos y accesorios con despacho a todo Chile.">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
 <body>
-  <header>
-    <p class="marca">
-      <a href="index.html"><img src="assets/img/logo.svg" alt="ArtCrate" width="150" height="40"></a>
-    </p>
-    <nav aria-label="Navegación principal">
-      <ul>
-        <li><a href="index.html" aria-current="page">Inicio</a></li>
-        <li><a href="catalogo.html">Catálogo</a></li>
-        <li><a href="carrito.html">Carrito</a></li>
-        <li><a href="login.html">Ingresar</a></li>
-        <li><a href="registro.html">Crear cuenta</a></li>
-      </ul>
+  <header class="acr-navbar">
+    <nav class="navbar navbar-expand-md" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/logo.svg" alt="ArtCrate" width="150" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPrincipal" aria-controls="navPrincipal" aria-expanded="false" aria-label="Abrir navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navPrincipal">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Ingresar</a></li>
+          <li class="nav-item"><a class="nav-link" href="registro.html">Crear cuenta</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <section class="hero" aria-labelledby="hero-titulo">
-      <img src="assets/img/hero-taller.svg" alt="Mesa de trabajo con materiales de arte" width="1100" height="360">
-      <h1 id="hero-titulo">Materiales de arte para tu próximo proyecto</h1>
-      <p>Pinturas, lienzos, cuadernos de dibujo y accesorios, con despacho a todo Chile.</p>
-      <p><a href="catalogo.html">Ver catálogo completo</a></p>
+  <main class="container my-4">
+    <section class="acr-hero row align-items-center g-4 mb-5" aria-labelledby="hero-titulo">
+      <div class="col-md-6">
+        <h1 id="hero-titulo">Materiales de arte para tu próximo proyecto</h1>
+        <p class="text-body-secondary">Pinturas, lienzos, cuadernos de dibujo y accesorios, con despacho a todo Chile.</p>
+        <a class="btn btn-primary" href="catalogo.html">Ver catálogo completo</a>
+      </div>
+      <div class="col-md-6">
+        <img src="assets/img/hero-taller.svg" alt="Mesa de trabajo con materiales de arte" width="1100" height="360">
+      </div>
     </section>
 
-    <section aria-labelledby="categorias-titulo">
-      <h2 id="categorias-titulo">Categorías</h2>
-      <ul>
-        <li><a href="catalogo.html#pinturas">Pinturas</a></li>
-        <li><a href="catalogo.html#lienzos">Lienzos y soportes</a></li>
-        <li><a href="catalogo.html#cuadernos">Cuadernos de dibujo</a></li>
-        <li><a href="catalogo.html#pinceles">Pinceles y accesorios</a></li>
+    <section class="mb-5" aria-labelledby="categorias-titulo">
+      <h2 id="categorias-titulo" class="h4 mb-3">Categorías</h2>
+      <ul class="nav">
+        <li class="nav-item"><a class="btn btn-outline-secondary btn-sm me-2 mb-2" href="catalogo.html#pinturas">Pinturas</a></li>
+        <li class="nav-item"><a class="btn btn-outline-secondary btn-sm me-2 mb-2" href="catalogo.html#lienzos">Lienzos y soportes</a></li>
+        <li class="nav-item"><a class="btn btn-outline-secondary btn-sm me-2 mb-2" href="catalogo.html#cuadernos">Cuadernos de dibujo</a></li>
+        <li class="nav-item"><a class="btn btn-outline-secondary btn-sm mb-2" href="catalogo.html#pinceles">Pinceles y accesorios</a></li>
       </ul>
     </section>
 
-    <section aria-labelledby="destacados-titulo">
-      <h2 id="destacados-titulo">Destacados de esta semana</h2>
-      <ul class="grilla-productos">
-        <li>
-          <article class="producto-card">
+    <section class="mb-5" aria-labelledby="destacados-titulo">
+      <h2 id="destacados-titulo" class="h4 mb-3">Destacados de esta semana</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <article class="acr-tarjeta">
             <figure>
               <img src="assets/img/producto-acrilico-vallejo.svg" alt="Acrílico Vallejo Model Color 60 ml, color rojo cadmio" width="400" height="300">
             </figure>
-            <h3><a href="producto.html">Acrílico Vallejo Model Color 60 ml</a></h3>
-            <p>Rojo Cadmio</p>
-            <p>$3.990</p>
+            <div class="acr-tarjeta-cuerpo">
+              <h3><a href="producto.html">Acrílico Vallejo Model Color 60 ml</a></h3>
+              <p class="mb-1 text-body-secondary">Rojo Cadmio</p>
+              <p class="acr-precio">$3.990</p>
+            </div>
           </article>
-        </li>
-        <li>
-          <article class="producto-card">
+        </div>
+        <div class="col">
+          <article class="acr-tarjeta">
             <figure>
               <img src="assets/img/producto-lienzo.svg" alt="Lienzo entelado 30 por 40 centímetros" width="400" height="300">
             </figure>
-            <h3><a href="producto.html">Lienzo entelado 30x40 cm</a></h3>
-            <p>Algodón, 3 cm de marco</p>
-            <p>$8.990</p>
+            <div class="acr-tarjeta-cuerpo">
+              <h3><a href="producto.html">Lienzo entelado 30x40 cm</a></h3>
+              <p class="mb-1 text-body-secondary">Algodón, 3 cm de marco</p>
+              <p class="acr-precio">$8.990</p>
+            </div>
           </article>
-        </li>
-        <li>
-          <article class="producto-card">
+        </div>
+        <div class="col">
+          <article class="acr-tarjeta">
             <figure>
               <img src="assets/img/producto-cuaderno-canson.svg" alt="Cuaderno de bocetos Canson XL, 21 por 29,7 centímetros" width="400" height="300">
             </figure>
-            <h3><a href="producto.html">Cuaderno de bocetos Canson XL</a></h3>
-            <p>110 hojas, 150 g/m²</p>
-            <p>$9.990</p>
+            <div class="acr-tarjeta-cuerpo">
+              <h3><a href="producto.html">Cuaderno de bocetos Canson XL</a></h3>
+              <p class="mb-1 text-body-secondary">110 hojas, 150 g/m²</p>
+              <p class="acr-precio">$9.990</p>
+            </div>
           </article>
-        </li>
-        <li>
-          <article class="producto-card">
+        </div>
+        <div class="col">
+          <article class="acr-tarjeta">
             <figure>
               <img src="assets/img/producto-acuarelas-cotman.svg" alt="Set de acuarelas Winsor and Newton Cotman, 12 colores" width="400" height="300">
             </figure>
-            <h3><a href="producto.html">Acuarelas Winsor &amp; Newton Cotman</a></h3>
-            <p>12 colores</p>
-            <p>$18.990</p>
+            <div class="acr-tarjeta-cuerpo">
+              <h3><a href="producto.html">Acuarelas Winsor &amp; Newton Cotman</a></h3>
+              <p class="mb-1 text-body-secondary">12 colores</p>
+              <p class="acr-precio">$18.990</p>
+            </div>
           </article>
-        </li>
-      </ul>
+        </div>
+      </div>
     </section>
 
     <section aria-labelledby="sobre-titulo">
-      <h2 id="sobre-titulo">Sobre ArtCrate</h2>
-      <p>Vendemos materiales de arte seleccionados para estudiantes de artes visuales y diseño, e
+      <h2 id="sobre-titulo" class="h4 mb-3">Sobre ArtCrate</h2>
+      <p class="text-body-secondary" style="max-width: 65ch;">Vendemos materiales de arte seleccionados para estudiantes de artes visuales y diseño, e
       ilustradores independientes. Trabajamos con marcas como Vallejo, Canson, Faber-Castell y
       Winsor &amp; Newton, y agrupamos productos en kits según el tipo de proyecto (acuarela, óleo,
       dibujo) para simplificar la compra a quienes recién empiezan.</p>
     </section>
   </main>
 
-  <footer>
-    <section aria-labelledby="footer-tienda">
-      <h2 id="footer-tienda">ArtCrate</h2>
-      <p>Materiales de arte para estudiantes y artistas. Despacho a todo Chile.</p>
-    </section>
-    <section aria-labelledby="footer-contacto">
-      <h2 id="footer-contacto">Contacto</h2>
-      <address>
-        <p>Av. Providencia 1234, local 5, Providencia, Santiago</p>
-        <p>Teléfono: <a href="tel:+56912345678">+56 9 1234 5678</a></p>
-        <p>Correo: <a href="mailto:contacto@artcrate.cl">contacto@artcrate.cl</a></p>
-      </address>
-    </section>
-    <section aria-labelledby="footer-horario">
-      <h2 id="footer-horario">Horario de atención</h2>
-      <p>Lunes a viernes, 10:00 a 19:00</p>
-      <p>Sábado, 10:00 a 14:00</p>
-    </section>
-    <p class="derechos">&copy; 2026 ArtCrate. Proyecto académico — Desarrollo Fullstack 2. <a href="admin/index.html">Acceso administrador</a></p>
+  <footer class="acr-footer py-4">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <h2>ArtCrate</h2>
+          <p>Materiales de arte para estudiantes y artistas. Despacho a todo Chile.</p>
+        </div>
+        <div class="col-md-4">
+          <h2>Contacto</h2>
+          <address>
+            <p class="mb-1">Av. Providencia 1234, local 5, Providencia, Santiago</p>
+            <p class="mb-1">Teléfono: <a href="tel:+56912345678">+56 9 1234 5678</a></p>
+            <p class="mb-0">Correo: <a href="mailto:contacto@artcrate.cl">contacto@artcrate.cl</a></p>
+          </address>
+        </div>
+        <div class="col-md-4">
+          <h2>Horario de atención</h2>
+          <p class="mb-1">Lunes a viernes, 10:00 a 19:00</p>
+          <p class="mb-0">Sábado, 10:00 a 14:00</p>
+        </div>
+      </div>
+      <p class="acr-derechos">&copy; 2026 ArtCrate. Proyecto académico — Desarrollo Fullstack 2. <a href="admin/index.html">Acceso administrador</a></p>
+    </div>
   </footer>
 
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
