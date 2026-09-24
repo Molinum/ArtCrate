@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="40" viewBox="0 0 150 40" role="img" aria-label="ArtCrate">
+  <rect x="0" y="0" width="22" height="22" y2="0" fill="none" stroke="#3a3a35" stroke-width="2"/>
+  <rect x="1" y="9" width="20" height="12" fill="#3a3a35"/>
+  <text x="30" y="27" font-family="Georgia, serif" font-size="22" fill="#242420">ArtCrate</text>
+</svg>
