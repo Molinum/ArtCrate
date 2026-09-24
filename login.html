@@ -5,61 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ingresar · ArtCrate</title>
   <meta name="description" content="Inicia sesión en tu cuenta de ArtCrate.">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
 <body>
-  <header>
-    <p class="marca">
-      <a href="index.html"><img src="assets/img/logo.svg" alt="ArtCrate" width="150" height="40"></a>
-    </p>
-    <nav aria-label="Navegación principal">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="catalogo.html">Catálogo</a></li>
-        <li><a href="carrito.html">Carrito</a></li>
-        <li><a href="login.html" aria-current="page">Ingresar</a></li>
-        <li><a href="registro.html">Crear cuenta</a></li>
-      </ul>
+  <header class="acr-navbar">
+    <nav class="navbar navbar-expand-md" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/logo.svg" alt="ArtCrate" width="150" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPrincipal" aria-controls="navPrincipal" aria-expanded="false" aria-label="Abrir navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navPrincipal">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito</a></li>
+          <li class="nav-item"><a class="nav-link active" href="login.html" aria-current="page">Ingresar</a></li>
+          <li class="nav-item"><a class="nav-link" href="registro.html">Crear cuenta</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <h1>Ingresar</h1>
+  <main class="container my-4">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <h1 class="mb-4">Ingresar</h1>
 
-    <form action="index.html" method="post">
-      <div>
-        <label for="correo">Correo electrónico</label>
-        <input type="email" id="correo" name="correo" required>
-      </div>
-      <div>
-        <label for="contrasena">Contraseña</label>
-        <input type="password" id="contrasena" name="contrasena" minlength="8" required>
-      </div>
-      <button type="submit">Ingresar</button>
-    </form>
+        <form action="index.html" method="post">
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo" name="correo" required>
+          </div>
+          <div class="mb-3">
+            <label for="contrasena" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="contrasena" name="contrasena" minlength="8" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Ingresar</button>
+        </form>
 
-    <p>¿Aún no tienes cuenta? <a href="registro.html">Regístrate aquí</a>.</p>
+        <p class="mt-3">¿Aún no tienes cuenta? <a href="registro.html">Regístrate aquí</a>.</p>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <section aria-labelledby="footer-tienda">
-      <h2 id="footer-tienda">ArtCrate</h2>
-      <p>Materiales de arte para estudiantes y artistas. Despacho a todo Chile.</p>
-    </section>
-    <section aria-labelledby="footer-contacto">
-      <h2 id="footer-contacto">Contacto</h2>
-      <address>
-        <p>Av. Providencia 1234, local 5, Providencia, Santiago</p>
-        <p>Teléfono: <a href="tel:+56912345678">+56 9 1234 5678</a></p>
-        <p>Correo: <a href="mailto:contacto@artcrate.cl">contacto@artcrate.cl</a></p>
-      </address>
-    </section>
-    <section aria-labelledby="footer-horario">
-      <h2 id="footer-horario">Horario de atención</h2>
-      <p>Lunes a viernes, 10:00 a 19:00</p>
-      <p>Sábado, 10:00 a 14:00</p>
-    </section>
-    <p class="derechos">&copy; 2026 ArtCrate. Proyecto académico — Desarrollo Fullstack 2. <a href="admin/index.html">Acceso administrador</a></p>
+  <footer class="acr-footer py-4">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <h2>ArtCrate</h2>
+          <p>Materiales de arte para estudiantes y artistas. Despacho a todo Chile.</p>
+        </div>
+        <div class="col-md-4">
+          <h2>Contacto</h2>
+          <address>
+            <p class="mb-1">Av. Providencia 1234, local 5, Providencia, Santiago</p>
+            <p class="mb-1">Teléfono: <a href="tel:+56912345678">+56 9 1234 5678</a></p>
+            <p class="mb-0">Correo: <a href="mailto:contacto@artcrate.cl">contacto@artcrate.cl</a></p>
+          </address>
+        </div>
+        <div class="col-md-4">
+          <h2>Horario de atención</h2>
+          <p class="mb-1">Lunes a viernes, 10:00 a 19:00</p>
+          <p class="mb-0">Sábado, 10:00 a 14:00</p>
+        </div>
+      </div>
+      <p class="acr-derechos">&copy; 2026 ArtCrate. Proyecto académico — Desarrollo Fullstack 2. <a href="admin/index.html">Acceso administrador</a></p>
+    </div>
   </footer>
 
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
