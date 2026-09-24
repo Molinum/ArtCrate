@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingresar · ArtCrate</title>
+  <meta name="description" content="Inicia sesión en tu cuenta de ArtCrate.">
+</head>
+<body>
+  <header>
+    <p class="marca">
+      <a href="index.html"><img src="assets/img/logo.svg" alt="ArtCrate" width="150" height="40"></a>
+    </p>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="login.html" aria-current="page">Ingresar</a></li>
+        <li><a href="registro.html">Crear cuenta</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Ingresar</h1>
+
+    <form action="index.html" method="post">
+      <div>
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" required>
+      </div>
+      <div>
+        <label for="contrasena">Contraseña</label>
+        <input type="password" id="contrasena" name="contrasena" minlength="8" required>
+      </div>
+      <button type="submit">Ingresar</button>
+    </form>
+
+    <p>¿Aún no tienes cuenta? <a href="registro.html">Regístrate aquí</a>.</p>
+  </main>
+
+  <footer>
+    <section aria-labelledby="footer-tienda">
+      <h2 id="footer-tienda">ArtCrate</h2>
+      <p>Materiales de arte para estudiantes y artistas. Despacho a todo Chile.</p>
+    </section>
+    <section aria-labelledby="footer-contacto">
+      <h2 id="footer-contacto">Contacto</h2>
+      <address>
+        <p>Av. Providencia 1234, local 5, Providencia, Santiago</p>
+        <p>Teléfono: <a href="tel:+56912345678">+56 9 1234 5678</a></p>
+        <p>Correo: <a href="mailto:contacto@artcrate.cl">contacto@artcrate.cl</a></p>
+      </address>
+    </section>
+    <section aria-labelledby="footer-horario">
+      <h2 id="footer-horario">Horario de atención</h2>
+      <p>Lunes a viernes, 10:00 a 19:00</p>
+      <p>Sábado, 10:00 a 14:00</p>
+    </section>
+    <p class="derechos">&copy; 2026 ArtCrate. Proyecto académico — Desarrollo Fullstack 2. <a href="admin/index.html">Acceso administrador</a></p>
+  </footer>
+
+</body>
+</html>

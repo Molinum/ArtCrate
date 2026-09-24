@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear cuenta · ArtCrate</title>
+  <meta name="description" content="Regístrate en ArtCrate para comprar y seguir tus pedidos.">
+</head>
+<body>
+  <header>
+    <p class="marca">
+      <a href="index.html"><img src="assets/img/logo.svg" alt="ArtCrate" width="150" height="40"></a>
+    </p>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="login.html">Ingresar</a></li>
+        <li><a href="registro.html" aria-current="page">Crear cuenta</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Crear cuenta</h1>
+
+    <form action="index.html" method="post">
+      <div>
+        <label for="nombre-completo">Nombre completo</label>
+        <input type="text" id="nombre-completo" name="nombre-completo" required>
+      </div>
+      <div>
+        <label for="correo-registro">Correo electrónico</label>
+        <input type="email" id="correo-registro" name="correo" required>
+      </div>
+      <div>
+        <label for="contrasena-registro">Contraseña</label>
+        <input type="password" id="contrasena-registro" name="contrasena" minlength="8" required>
+      </div>
+      <div>
+        <label for="confirmar-contrasena">Confirmar contraseña</label>
+        <input type="password" id="confirmar-contrasena" name="confirmar-contrasena" minlength="8" required>
+      </div>
+      <div>
+        <label for="direccion-registro">Dirección de despacho</label>
+        <input type="text" id="direccion-registro" name="direccion">
+      </div>
+      <button type="submit">Crear cuenta</button>
+    </form>
+
+    <p>¿Ya tienes cuenta? <a href="login.html">Ingresa aquí</a>.</p>
+  </main>
+
+  <footer>
+    <section aria-labelledby="footer-tienda">
+      <h2 id="footer-tienda">ArtCrate</h2>
+      <p>Materiales de arte para estudiantes y artistas. Despacho a todo Chile.</p>
+    </section>
+    <section aria-labelledby="footer-contacto">
+      <h2 id="footer-contacto">Contacto</h2>
+      <address>
+        <p>Av. Providencia 1234, local 5, Providencia, Santiago</p>
+        <p>Teléfono: <a href="tel:+56912345678">+56 9 1234 5678</a></p>
+        <p>Correo: <a href="mailto:contacto@artcrate.cl">contacto@artcrate.cl</a></p>
+      </address>
+    </section>
+    <section aria-labelledby="footer-horario">
+      <h2 id="footer-horario">Horario de atención</h2>
+      <p>Lunes a viernes, 10:00 a 19:00</p>
+      <p>Sábado, 10:00 a 14:00</p>
+    </section>
+    <p class="derechos">&copy; 2026 ArtCrate. Proyecto académico — Desarrollo Fullstack 2. <a href="admin/index.html">Acceso administrador</a></p>
+  </footer>
+
+</body>
+</html>
