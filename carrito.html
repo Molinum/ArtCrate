@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito · ArtCrate</title>
+  <meta name="description" content="Revisa los productos agregados a tu carrito antes de pagar.">
+</head>
+<body>
+  <header>
+    <p class="marca">
+      <a href="index.html"><img src="assets/img/logo.svg" alt="ArtCrate" width="150" height="40"></a>
+    </p>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="carrito.html" aria-current="page">Carrito</a></li>
+        <li><a href="login.html">Ingresar</a></li>
+        <li><a href="registro.html">Crear cuenta</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Carrito de compras</h1>
+
+    <table>
+      <caption>Productos en tu carrito</caption>
+      <thead>
+        <tr>
+          <th scope="col">Producto</th>
+          <th scope="col">Variante</th>
+          <th scope="col">Precio unitario</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Subtotal</th>
+          <th scope="col"><span>Acciones</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Acrílico Vallejo Model Color 60 ml</th>
+          <td>Rojo Cadmio</td>
+          <td>$3.990</td>
+          <td>
+            <label for="cantidad-1">Cantidad</label>
+            <input type="number" id="cantidad-1" name="cantidad-1" value="2" min="1" max="20">
+          </td>
+          <td>$7.980</td>
+          <td><button type="button">Quitar</button></td>
+        </tr>
+        <tr>
+          <th scope="row">Cuaderno de bocetos Canson XL</th>
+          <td>110 hojas</td>
+          <td>$9.990</td>
+          <td>
+            <label for="cantidad-2">Cantidad</label>
+            <input type="number" id="cantidad-2" name="cantidad-2" value="1" min="1" max="20">
+          </td>
+          <td>$9.990</td>
+          <td><button type="button">Quitar</button></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th scope="row" colspan="4">Total</th>
+          <td>$17.970</td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <p><a href="checkout.html">Continuar hacia el pago</a></p>
+  </main>
+
+  <footer>
+    <section aria-labelledby="footer-tienda">
+      <h2 id="footer-tienda">ArtCrate</h2>
+      <p>Materiales de arte para estudiantes y artistas. Despacho a todo Chile.</p>
+    </section>
+    <section aria-labelledby="footer-contacto">
+      <h2 id="footer-contacto">Contacto</h2>
+      <address>
+        <p>Av. Providencia 1234, local 5, Providencia, Santiago</p>
+        <p>Teléfono: <a href="tel:+56912345678">+56 9 1234 5678</a></p>
+        <p>Correo: <a href="mailto:contacto@artcrate.cl">contacto@artcrate.cl</a></p>
+      </address>
+    </section>
+    <section aria-labelledby="footer-horario">
+      <h2 id="footer-horario">Horario de atención</h2>
+      <p>Lunes a viernes, 10:00 a 19:00</p>
+      <p>Sábado, 10:00 a 14:00</p>
+    </section>
+    <p class="derechos">&copy; 2026 ArtCrate. Proyecto académico — Desarrollo Fullstack 2. <a href="admin/index.html">Acceso administrador</a></p>
+  </footer>
+
+</body>
+</html>

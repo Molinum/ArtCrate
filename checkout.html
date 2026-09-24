@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar compra · ArtCrate</title>
+  <meta name="description" content="Ingresa tus datos de envío y método de pago para completar el pedido.">
+</head>
+<body>
+  <header>
+    <p class="marca">
+      <a href="index.html"><img src="assets/img/logo.svg" alt="ArtCrate" width="150" height="40"></a>
+    </p>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="login.html">Ingresar</a></li>
+        <li><a href="registro.html">Crear cuenta</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Finalizar compra</h1>
+
+    <form action="index.html" method="post">
+      <fieldset>
+        <legend>Datos de envío</legend>
+        <div>
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div>
+          <label for="direccion">Dirección</label>
+          <input type="text" id="direccion" name="direccion" required>
+        </div>
+        <div>
+          <label for="comuna">Comuna</label>
+          <input type="text" id="comuna" name="comuna" required>
+        </div>
+        <div>
+          <label for="region">Región</label>
+          <select id="region" name="region" required>
+            <option value="">Selecciona una región</option>
+            <option value="rm">Región Metropolitana</option>
+            <option value="valparaiso">Valparaíso</option>
+            <option value="biobio">Biobío</option>
+          </select>
+        </div>
+        <div>
+          <label for="telefono">Teléfono de contacto</label>
+          <input type="tel" id="telefono" name="telefono" required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Método de pago</legend>
+        <div>
+          <input type="radio" id="pago-tarjeta" name="metodo-pago" value="tarjeta" checked>
+          <label for="pago-tarjeta">Tarjeta de crédito o débito</label>
+        </div>
+        <div>
+          <input type="radio" id="pago-transferencia" name="metodo-pago" value="transferencia">
+          <label for="pago-transferencia">Transferencia bancaria</label>
+        </div>
+      </fieldset>
+
+      <section aria-labelledby="resumen-titulo">
+        <h2 id="resumen-titulo">Resumen del pedido</h2>
+        <dl>
+          <dt>Productos (2)</dt>
+          <dd>$17.970</dd>
+          <dt>Despacho</dt>
+          <dd>$3.500</dd>
+          <dt>Total</dt>
+          <dd>$21.470</dd>
+        </dl>
+      </section>
+
+      <button type="submit">Confirmar pedido</button>
+    </form>
+  </main>
+
+  <footer>
+    <section aria-labelledby="footer-tienda">
+      <h2 id="footer-tienda">ArtCrate</h2>
+      <p>Materiales de arte para estudiantes y artistas. Despacho a todo Chile.</p>
+    </section>
+    <section aria-labelledby="footer-contacto">
+      <h2 id="footer-contacto">Contacto</h2>
+      <address>
+        <p>Av. Providencia 1234, local 5, Providencia, Santiago</p>
+        <p>Teléfono: <a href="tel:+56912345678">+56 9 1234 5678</a></p>
+        <p>Correo: <a href="mailto:contacto@artcrate.cl">contacto@artcrate.cl</a></p>
+      </address>
+    </section>
+    <section aria-labelledby="footer-horario">
+      <h2 id="footer-horario">Horario de atención</h2>
+      <p>Lunes a viernes, 10:00 a 19:00</p>
+      <p>Sábado, 10:00 a 14:00</p>
+    </section>
+    <p class="derechos">&copy; 2026 ArtCrate. Proyecto académico — Desarrollo Fullstack 2. <a href="admin/index.html">Acceso administrador</a></p>
+  </footer>
+
+</body>
+</html>
