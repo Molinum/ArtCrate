@@ -5,116 +5,131 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Acrílico Vallejo Model Color 60 ml · ArtCrate</title>
   <meta name="description" content="Ficha de producto: acrílico Vallejo Model Color 60 ml, con selección de color y formato.">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
 <body>
-  <header>
-    <p class="marca">
-      <a href="index.html"><img src="assets/img/logo.svg" alt="ArtCrate" width="150" height="40"></a>
-    </p>
-    <nav aria-label="Navegación principal">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="catalogo.html" aria-current="page">Catálogo</a></li>
-        <li><a href="carrito.html">Carrito</a></li>
-        <li><a href="login.html">Ingresar</a></li>
-        <li><a href="registro.html">Crear cuenta</a></li>
-      </ul>
+  <header class="acr-navbar">
+    <nav class="navbar navbar-expand-md" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/logo.svg" alt="ArtCrate" width="150" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPrincipal" aria-controls="navPrincipal" aria-expanded="false" aria-label="Abrir navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navPrincipal">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="catalogo.html" aria-current="page">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Ingresar</a></li>
+          <li class="nav-item"><a class="nav-link" href="registro.html">Crear cuenta</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <nav aria-label="Ruta de navegación">
-      <ol>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="catalogo.html">Catálogo</a></li>
-        <li aria-current="page">Acrílico Vallejo Model Color 60 ml</li>
+  <main class="container my-4">
+    <nav class="acr-breadcrumb mb-3" aria-label="Ruta de navegación">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="catalogo.html">Catálogo</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Acrílico Vallejo Model Color 60 ml</li>
       </ol>
     </nav>
 
-    <article>
-      <h1>Acrílico Vallejo Model Color 60 ml</h1>
-
-      <section aria-label="Galería de imágenes">
-        <figure>
-          <img src="assets/img/producto-acrilico-vallejo.svg" alt="Envase de acrílico Vallejo Model Color, 60 ml, color rojo cadmio" width="400" height="300">
+    <article class="row g-5">
+      <div class="col-md-6">
+        <figure class="mb-2">
+          <img class="img-fluid border" src="assets/img/producto-acrilico-vallejo.svg" alt="Envase de acrílico Vallejo Model Color, 60 ml, color rojo cadmio">
         </figure>
-        <ul>
-          <li><img src="assets/img/producto-acrilico-vallejo.svg" alt="Vista frontal del envase" width="80" height="60"></li>
-          <li><img src="assets/img/producto-acrilico-vallejo-galeria-2.svg" alt="Etiqueta trasera con ficha técnica" width="80" height="60"></li>
-          <li><img src="assets/img/producto-acrilico-vallejo-galeria-3.svg" alt="Color aplicado sobre lienzo" width="80" height="60"></li>
+        <ul class="list-inline">
+          <li class="list-inline-item"><img class="border" src="assets/img/producto-acrilico-vallejo.svg" alt="Vista frontal del envase" width="80" height="60"></li>
+          <li class="list-inline-item"><img class="border" src="assets/img/producto-acrilico-vallejo-galeria-2.svg" alt="Etiqueta trasera con ficha técnica" width="80" height="60"></li>
+          <li class="list-inline-item"><img class="border" src="assets/img/producto-acrilico-vallejo-galeria-3.svg" alt="Color aplicado sobre lienzo" width="80" height="60"></li>
         </ul>
-      </section>
+      </div>
 
-      <p>$3.990</p>
-      <p>Acrílico mate de secado rápido, alta concentración de pigmento y buena cubrición en una
-      sola pasada. Apto para lienzo, madera y cartón preparado.</p>
+      <div class="col-md-6">
+        <h1>Acrílico Vallejo Model Color 60 ml</h1>
+        <p class="acr-precio fs-4">$3.990</p>
+        <p class="text-body-secondary">Acrílico mate de secado rápido, alta concentración de pigmento y buena cubrición en una
+        sola pasada. Apto para lienzo, madera y cartón preparado.</p>
 
-      <form action="carrito.html" method="get">
-        <fieldset>
-          <legend>Color</legend>
-          <label for="variante-color">Color</label>
-          <select id="variante-color" name="color">
-            <option value="rojo-cadmio">Rojo Cadmio</option>
-            <option value="azul-ultramar">Azul Ultramar</option>
-            <option value="amarillo-medio">Amarillo Medio</option>
-            <option value="negro">Negro</option>
-            <option value="blanco-titanio">Blanco Titanio</option>
-          </select>
-        </fieldset>
+        <form action="carrito.html" method="get" class="mb-4">
+          <fieldset>
+            <legend>Color</legend>
+            <label for="variante-color" class="form-label">Color</label>
+            <select class="form-select" id="variante-color" name="color">
+              <option value="rojo-cadmio">Rojo Cadmio</option>
+              <option value="azul-ultramar">Azul Ultramar</option>
+              <option value="amarillo-medio">Amarillo Medio</option>
+              <option value="negro">Negro</option>
+              <option value="blanco-titanio">Blanco Titanio</option>
+            </select>
+          </fieldset>
 
-        <fieldset>
-          <legend>Formato</legend>
-          <label for="variante-formato">Formato</label>
-          <select id="variante-formato" name="formato">
-            <option value="60ml">60 ml</option>
-            <option value="200ml">200 ml</option>
-          </select>
-        </fieldset>
+          <fieldset>
+            <legend>Formato</legend>
+            <label for="variante-formato" class="form-label">Formato</label>
+            <select class="form-select" id="variante-formato" name="formato">
+              <option value="60ml">60 ml</option>
+              <option value="200ml">200 ml</option>
+            </select>
+          </fieldset>
 
-        <div>
-          <label for="cantidad">Cantidad</label>
-          <input type="number" id="cantidad" name="cantidad" value="1" min="1" max="20">
-        </div>
+          <div class="mb-3" style="max-width: 8rem;">
+            <label for="cantidad" class="form-label">Cantidad</label>
+            <input type="number" class="form-control" id="cantidad" name="cantidad" value="1" min="1" max="20">
+          </div>
 
-        <button type="submit">Agregar al carrito</button>
-      </form>
+          <button type="submit" class="btn btn-primary">Agregar al carrito</button>
+        </form>
 
-      <section aria-labelledby="ficha-titulo">
-        <h2 id="ficha-titulo">Ficha técnica</h2>
-        <dl>
-          <dt>Marca</dt>
-          <dd>Vallejo</dd>
-          <dt>Tipo</dt>
-          <dd>Acrílico mate</dd>
-          <dt>Contenido</dt>
-          <dd>60 ml</dd>
-          <dt>Secado</dt>
-          <dd>15 a 20 minutos</dd>
-        </dl>
-      </section>
+        <section aria-labelledby="ficha-titulo">
+          <h2 id="ficha-titulo" class="h5">Ficha técnica</h2>
+          <dl class="row mb-0">
+            <dt class="col-sm-4">Marca</dt>
+            <dd class="col-sm-8">Vallejo</dd>
+            <dt class="col-sm-4">Tipo</dt>
+            <dd class="col-sm-8">Acrílico mate</dd>
+            <dt class="col-sm-4">Contenido</dt>
+            <dd class="col-sm-8">60 ml</dd>
+            <dt class="col-sm-4">Secado</dt>
+            <dd class="col-sm-8">15 a 20 minutos</dd>
+          </dl>
+        </section>
+      </div>
     </article>
   </main>
 
-  <footer>
-    <section aria-labelledby="footer-tienda">
-      <h2 id="footer-tienda">ArtCrate</h2>
-      <p>Materiales de arte para estudiantes y artistas. Despacho a todo Chile.</p>
-    </section>
-    <section aria-labelledby="footer-contacto">
-      <h2 id="footer-contacto">Contacto</h2>
-      <address>
-        <p>Av. Providencia 1234, local 5, Providencia, Santiago</p>
-        <p>Teléfono: <a href="tel:+56912345678">+56 9 1234 5678</a></p>
-        <p>Correo: <a href="mailto:contacto@artcrate.cl">contacto@artcrate.cl</a></p>
-      </address>
-    </section>
-    <section aria-labelledby="footer-horario">
-      <h2 id="footer-horario">Horario de atención</h2>
-      <p>Lunes a viernes, 10:00 a 19:00</p>
-      <p>Sábado, 10:00 a 14:00</p>
-    </section>
-    <p class="derechos">&copy; 2026 ArtCrate. Proyecto académico — Desarrollo Fullstack 2. <a href="admin/index.html">Acceso administrador</a></p>
+  <footer class="acr-footer py-4">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <h2>ArtCrate</h2>
+          <p>Materiales de arte para estudiantes y artistas. Despacho a todo Chile.</p>
+        </div>
+        <div class="col-md-4">
+          <h2>Contacto</h2>
+          <address>
+            <p class="mb-1">Av. Providencia 1234, local 5, Providencia, Santiago</p>
+            <p class="mb-1">Teléfono: <a href="tel:+56912345678">+56 9 1234 5678</a></p>
+            <p class="mb-0">Correo: <a href="mailto:contacto@artcrate.cl">contacto@artcrate.cl</a></p>
+          </address>
+        </div>
+        <div class="col-md-4">
+          <h2>Horario de atención</h2>
+          <p class="mb-1">Lunes a viernes, 10:00 a 19:00</p>
+          <p class="mb-0">Sábado, 10:00 a 14:00</p>
+        </div>
+      </div>
+      <p class="acr-derechos">&copy; 2026 ArtCrate. Proyecto académico — Desarrollo Fullstack 2. <a href="admin/index.html">Acceso administrador</a></p>
+    </div>
   </footer>
 
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
