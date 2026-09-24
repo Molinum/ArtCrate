@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuevo producto · Administración · ArtCrate</title>
+  <meta name="description" content="Formulario para agregar o editar un producto del catálogo.">
+</head>
+<body>
+  <header>
+    <p class="marca">
+      <a href="index.html"><img src="../assets/img/logo.svg" alt="ArtCrate" width="150" height="40"></a>
+      <span>Administración</span>
+    </p>
+    <nav aria-label="Navegación de administración">
+      <ul>
+        <li><a href="index.html">Panel</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="producto-form.html" aria-current="page">Nuevo producto</a></li>
+        <li><a href="pedidos.html">Pedidos</a></li>
+      </ul>
+    </nav>
+    <p><a href="../index.html">Volver a la tienda</a></p>
+  </header>
+
+  <main>
+    <h1>Agregar producto</h1>
+
+    <form action="productos.html" method="post">
+      <div>
+        <label for="p-nombre">Nombre del producto</label>
+        <input type="text" id="p-nombre" name="nombre" required>
+      </div>
+
+      <div>
+        <label for="p-descripcion">Descripción</label>
+        <textarea id="p-descripcion" name="descripcion" rows="4"></textarea>
+      </div>
+
+      <div>
+        <label for="p-categoria">Categoría</label>
+        <select id="p-categoria" name="categoria" required>
+          <option value="">Selecciona una categoría</option>
+          <option value="pinturas">Pinturas</option>
+          <option value="lienzos">Lienzos y soportes</option>
+          <option value="cuadernos">Cuadernos de dibujo</option>
+          <option value="pinceles">Pinceles y accesorios</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="p-marca">Marca / proveedor</label>
+        <input type="text" id="p-marca" name="marca" required>
+      </div>
+
+      <div>
+        <label for="p-precio">Precio (CLP)</label>
+        <input type="number" id="p-precio" name="precio" min="0" step="10" required>
+      </div>
+
+      <div>
+        <label for="p-stock">Stock disponible</label>
+        <input type="number" id="p-stock" name="stock" min="0" required>
+      </div>
+
+      <fieldset>
+        <legend>Variantes</legend>
+        <div>
+          <label for="p-color">Color</label>
+          <input type="text" id="p-color" name="color" placeholder="Ej: Rojo Cadmio">
+        </div>
+        <div>
+          <label for="p-formato">Formato / tamaño</label>
+          <input type="text" id="p-formato" name="formato" placeholder="Ej: 60 ml">
+        </div>
+      </fieldset>
+
+      <div>
+        <label for="p-imagen">Imagen del producto</label>
+        <input type="file" id="p-imagen" name="imagen" accept="image/*">
+      </div>
+
+      <button type="submit">Guardar producto</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 ArtCrate. Panel de administración — proyecto académico Desarrollo Fullstack 2.</p>
+  </footer>
+
+</body>
+</html>

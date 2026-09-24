@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedidos · Administración · ArtCrate</title>
+  <meta name="description" content="Listado de pedidos realizados por los clientes de ArtCrate.">
+</head>
+<body>
+  <header>
+    <p class="marca">
+      <a href="index.html"><img src="../assets/img/logo.svg" alt="ArtCrate" width="150" height="40"></a>
+      <span>Administración</span>
+    </p>
+    <nav aria-label="Navegación de administración">
+      <ul>
+        <li><a href="index.html">Panel</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="producto-form.html">Nuevo producto</a></li>
+        <li><a href="pedidos.html" aria-current="page">Pedidos</a></li>
+      </ul>
+    </nav>
+    <p><a href="../index.html">Volver a la tienda</a></p>
+  </header>
+
+  <main>
+    <h1>Pedidos</h1>
+
+    <table>
+      <caption>Pedidos recientes</caption>
+      <thead>
+        <tr>
+          <th scope="col">N° pedido</th>
+          <th scope="col">Cliente</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Total</th>
+          <th scope="col">Estado</th>
+          <th scope="col"><span>Acciones</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">ORD-1042</th>
+          <td>Javiera Rojas</td>
+          <td>22-09-2026</td>
+          <td>$21.470</td>
+          <td>Preparando</td>
+          <td><a href="pedidos.html">Ver detalle</a></td>
+        </tr>
+        <tr>
+          <th scope="row">ORD-1041</th>
+          <td>Matías Fuentes</td>
+          <td>21-09-2026</td>
+          <td>$12.990</td>
+          <td>Enviado</td>
+          <td><a href="pedidos.html">Ver detalle</a></td>
+        </tr>
+        <tr>
+          <th scope="row">ORD-1040</th>
+          <td>Camila Soto</td>
+          <td>19-09-2026</td>
+          <td>$34.960</td>
+          <td>Entregado</td>
+          <td><a href="pedidos.html">Ver detalle</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 ArtCrate. Panel de administración — proyecto académico Desarrollo Fullstack 2.</p>
+  </footer>
+
+</body>
+</html>
