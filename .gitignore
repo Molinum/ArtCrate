@@ -1,0 +1,20 @@
+# Sistema operativo / editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Node (para las etapas E2/E3 con React/TypeScript)
+node_modules/
+dist/
+build/
+.env
+.env.local
+
+# Java / Spring Boot (para E3)
+target/
+*.class
+
+# Archivos temporales de Office
+~$*.docx
+~$*.xlsx
