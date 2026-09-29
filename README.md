@@ -6,7 +6,16 @@ Proyecto semestral — **Desarrollo Fullstack 2**.
 
 ## Estado actual
 
-Sprint 1 (E1) — definición del producto y organización del desarrollo.
+E1 completo (Sprints 1-4): estructura, diseño visual y validaciones del sitio base. E2 (migración
+a React + TypeScript) es lo siguiente.
+
+## Fuente de verdad del proyecto
+
+[`docs/Analisis_Requerimientos_ArtCrate.docx`](docs/Analisis_Requerimientos_ArtCrate.docx) — documento
+vivo con el modelo de datos, el contrato de API objetivo, las reglas de negocio, el flujo crítico
+que debe funcionar de punta a punta en la defensa final, y el mapa de riesgos. Ante cualquier duda
+de alcance o de comportamiento del sistema, esa es la referencia, no esta sección resumida del
+README.
 
 ## Actores
 
@@ -21,7 +30,8 @@ historial y seguimiento de pedidos, panel de administración con CRUD de product
 Fuera del alcance: pasarela de pago real, integración con couriers, marketplace multivendedor
 (los proveedores se registran como un atributo del producto, no como un actor del sistema).
 
-Detalle completo en [`docs/ERS_Inicial_TiendaArtSupplies.docx`](docs/ERS_Inicial_TiendaArtSupplies.docx).
+Detalle completo en [`docs/Analisis_Requerimientos_ArtCrate.docx`](docs/Analisis_Requerimientos_ArtCrate.docx)
+(ver también el [`docs/ERS_Inicial_TiendaArtSupplies.docx`](docs/ERS_Inicial_TiendaArtSupplies.docx) de Sprint 1).
 
 ## Backlog
 
@@ -39,8 +49,11 @@ Detalle completo en [`docs/ERS_Inicial_TiendaArtSupplies.docx`](docs/ERS_Inicial
 ## Estructura del repositorio
 
 ```
-docs/       Documentación (ERS, backlog)
+docs/                     Documentación (análisis de requerimientos, ERS, backlog)
+assets/css/estilos.css    Estilos propios sobre Bootstrap
+assets/js/validaciones.js Validaciones de formularios (login, registro)
+assets/vendor/bootstrap/  Bootstrap 5 vendorizado (funciona sin conexión)
+assets/img/               Imágenes y placeholders
+admin/                    Páginas del panel de administración
+*.html (raíz)             Páginas del sitio de cliente
 ```
-
-A medida que avancen los sprints se irán agregando las carpetas del sitio (páginas, estilos,
-scripts) según lo que pida cada entrega.
