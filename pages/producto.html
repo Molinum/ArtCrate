@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acrílico 12 colores | ArtCrate</title>
+  <meta name="description" content="Set de pinturas acrílicas de 12 colores de ArtCrate.">
+</head>
+<body>
+
+  <!-- Encabezado: logo + navegación principal (igual en todas las páginas del cliente) -->
+  <header>
+    <a href="../index.html">
+      <img src="../assets/img/logo-artcrate.svg" alt="ArtCrate, tienda de insumos de arte" width="180" height="48">
+    </a>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="catalogo.html" aria-current="page">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html">Ingresar</a></li>
+        <li><a href="registro.html">Registrarme</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Ruta de regreso al catálogo -->
+    <p><a href="catalogo.html">&larr; Volver al catálogo</a></p>
+
+    <!-- En E1 esta página es una plantilla única; los datos dinámicos llegan en E2 -->
+    <article>
+      <h1>Acrílico 12 colores</h1>
+
+      <!-- figure + figcaption: imagen principal con su descripción -->
+      <figure>
+        <img src="../assets/img/producto-01-acrilico-12-colores.svg" alt="Set de pinturas acrílicas de 12 colores" width="600" height="600">
+        <figcaption>Set de 12 tubos de pintura acrílica de 22 ml.</figcaption>
+      </figure>
+
+      <section aria-labelledby="titulo-descripcion">
+        <h2 id="titulo-descripcion">Descripción</h2>
+        <p>Pinturas acrílicas de secado rápido y colores intensos, ideales para lienzo, madera y papel grueso. Se pueden mezclar entre sí y diluir con agua.</p>
+      </section>
+
+      <section aria-labelledby="titulo-especificaciones">
+        <h2 id="titulo-especificaciones">Especificaciones</h2>
+        <ul>
+          <li><strong>Marca:</strong> ArtCrate</li>
+          <li><strong>Formato:</strong> Tubo de 22 ml</li>
+          <li><strong>Contenido:</strong> 12 colores surtidos</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="titulo-compra">
+        <h2 id="titulo-compra">Compra</h2>
+        <p>Precio: <strong>$12.990</strong></p>
+        <p>Disponibilidad: <strong>En stock</strong></p>
+        <!-- Solo elemento visual: en E1 no tiene comportamiento -->
+        <button type="button">Agregar al carrito</button>
+      </section>
+    </article>
+  </main>
+
+  <!-- Pie de página (igual en todas las páginas del cliente) -->
+  <footer>
+    <section aria-labelledby="pie-contacto">
+      <h2 id="pie-contacto">Contacto</h2>
+      <address>
+        Av. Providencia 1234, Providencia, Santiago<br>
+        <a href="mailto:contacto@artcrate.cl">contacto@artcrate.cl</a><br>
+        <a href="tel:+56912345678">+56 9 1234 5678</a>
+      </address>
+    </section>
+    <nav aria-label="Enlaces del pie de página">
+      <h2>Enlaces útiles</h2>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <section aria-labelledby="pie-redes">
+      <h2 id="pie-redes">Síguenos</h2>
+      <ul>
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </section>
+    <p>&copy; 2026 ArtCrate. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
