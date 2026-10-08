@@ -147,6 +147,17 @@ header .nav-link.active {
   box-shadow: 0 0.5rem 1rem rgba(59, 42, 32, 0.2);
 }
 
+/* Detalle de producto: la imagen se adapta al ancho (img-fluid de Bootstrap) y no se deforma */
+.detalle-imagen {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--ac-arena);
+}
+
+.precio-detalle {
+  font-size: 2rem;
+}
+
 /* Botones del índice de categorías del catálogo */
 .nav-pills .nav-link {
   color: var(--ac-marron);

@@ -40,41 +40,48 @@
     </nav>
   </header>
 
-  <main>
+  <main class="container py-5">
     <!-- Ruta de regreso al catálogo -->
     <p><a href="catalogo.html">&larr; Volver al catálogo</a></p>
 
     <!-- En E1 esta página es una plantilla única; los datos dinámicos llegan en E2 -->
-    <article>
-      <h1>Acrílico 12 colores</h1>
+    <article class="row g-4">
+      <!-- Columna de la imagen: col-md-6 = mitad del ancho desde 768 px; bajo eso se apila -->
+      <div class="col-md-6">
+        <!-- figure + figcaption: imagen principal con su descripción -->
+        <figure class="mb-0">
+          <img src="../assets/img/producto-01-acrilico-12-colores.svg" class="img-fluid rounded detalle-imagen" alt="Set de pinturas acrílicas de 12 colores" width="600" height="600">
+          <figcaption class="text-secondary mt-2">Set de 12 tubos de pintura acrílica de 22 ml.</figcaption>
+        </figure>
+      </div>
 
-      <!-- figure + figcaption: imagen principal con su descripción -->
-      <figure>
-        <img src="../assets/img/producto-01-acrilico-12-colores.svg" alt="Set de pinturas acrílicas de 12 colores" width="600" height="600">
-        <figcaption>Set de 12 tubos de pintura acrílica de 22 ml.</figcaption>
-      </figure>
+      <!-- Columna de la información -->
+      <div class="col-md-6">
+        <h1>Acrílico 12 colores</h1>
 
-      <section aria-labelledby="titulo-descripcion">
-        <h2 id="titulo-descripcion">Descripción</h2>
-        <p>Pinturas acrílicas de secado rápido y colores intensos, ideales para lienzo, madera y papel grueso. Se pueden mezclar entre sí y diluir con agua.</p>
-      </section>
+        <!-- Precio y compra, bien visibles arriba -->
+        <section class="my-4" aria-labelledby="titulo-compra">
+          <h2 id="titulo-compra" class="visually-hidden">Compra</h2>
+          <p class="precio precio-detalle mb-1">$12.990</p>
+          <p>Disponibilidad: <span class="badge text-bg-success">En stock</span></p>
+          <!-- Solo elemento visual: en E1 no tiene comportamiento -->
+          <button type="button" class="btn btn-primary btn-lg w-100">Agregar al carrito</button>
+        </section>
 
-      <section aria-labelledby="titulo-especificaciones">
-        <h2 id="titulo-especificaciones">Especificaciones</h2>
-        <ul>
-          <li><strong>Marca:</strong> ArtCrate</li>
-          <li><strong>Formato:</strong> Tubo de 22 ml</li>
-          <li><strong>Contenido:</strong> 12 colores surtidos</li>
-        </ul>
-      </section>
+        <section aria-labelledby="titulo-descripcion">
+          <h2 id="titulo-descripcion" class="h4">Descripción</h2>
+          <p>Pinturas acrílicas de secado rápido y colores intensos, ideales para lienzo, madera y papel grueso. Se pueden mezclar entre sí y diluir con agua.</p>
+        </section>
 
-      <section aria-labelledby="titulo-compra">
-        <h2 id="titulo-compra">Compra</h2>
-        <p>Precio: <strong>$12.990</strong></p>
-        <p>Disponibilidad: <strong>En stock</strong></p>
-        <!-- Solo elemento visual: en E1 no tiene comportamiento -->
-        <button type="button">Agregar al carrito</button>
-      </section>
+        <section aria-labelledby="titulo-especificaciones">
+          <h2 id="titulo-especificaciones" class="h4">Especificaciones</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Marca:</strong> ArtCrate</li>
+            <li class="list-group-item"><strong>Formato:</strong> Tubo de 22 ml</li>
+            <li class="list-group-item"><strong>Contenido:</strong> 12 colores surtidos</li>
+          </ul>
+        </section>
+      </div>
     </article>
   </main>
 
