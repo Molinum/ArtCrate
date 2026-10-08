@@ -17,44 +17,73 @@
 
   <!-- Encabezado del panel de administración (separado del sitio del cliente) -->
   <header>
-    <p>ArtCrate &middot; Administración</p>
-    <nav aria-label="Menú de administración">
-      <ul>
-        <li><a href="index.html" aria-current="page">Panel</a></li>
-        <li><a href="productos.html">Productos</a></li>
-        <li><a href="pedidos.html">Pedidos</a></li>
-        <li><a href="../index.html">Volver a la tienda</a></li>
-      </ul>
+    <!-- Menú superior oscuro: se colapsa con botón hamburguesa bajo 992 px -->
+    <nav class="navbar navbar-expand-lg navbar-dark admin-navbar" aria-label="Menú de administración">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="../assets/img/logo-artcrate-claro.svg" alt="ArtCrate, administración" width="180" height="48">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-admin" aria-controls="menu-admin" aria-expanded="false" aria-label="Mostrar u ocultar el menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu-admin">
+          <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Panel</a></li>
+          <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="pedidos.html">Pedidos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html">Volver a la tienda</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <h1>Panel de administración</h1>
+  <main class="container py-4">
+    <h1 class="mb-4">Panel de administración</h1>
 
     <!-- Indicadores de ejemplo (datos estáticos) -->
-    <section aria-labelledby="titulo-resumen">
-      <h2 id="titulo-resumen">Resumen de la tienda</h2>
-      <dl>
-        <dt>Productos</dt>
-        <dd>12</dd>
-        <dt>Pedidos</dt>
-        <dd>8</dd>
-        <dt>Productos con stock bajo</dt>
-        <dd>3</dd>
-      </dl>
+    <section class="mb-5" aria-labelledby="titulo-resumen">
+      <h2 id="titulo-resumen" class="h4 mb-3">Resumen de la tienda</h2>
+      <!-- Tarjetas de Bootstrap en grilla: se apilan en móvil y van en fila desde 768 px -->
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="card h-100 tarjeta-indicador">
+            <div class="card-body">
+              <p class="card-text mb-1">Productos</p>
+              <p class="indicador mb-0">12</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card h-100 tarjeta-indicador">
+            <div class="card-body">
+              <p class="card-text mb-1">Pedidos</p>
+              <p class="indicador mb-0">8</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card h-100 tarjeta-indicador">
+            <div class="card-body">
+              <p class="card-text mb-1">Productos con stock bajo</p>
+              <p class="indicador text-danger mb-0">3</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section aria-labelledby="titulo-accesos">
-      <h2 id="titulo-accesos">Accesos rápidos</h2>
-      <ul>
-        <li><a href="productos.html">Gestionar productos</a></li>
-        <li><a href="pedidos.html">Ver pedidos</a></li>
-      </ul>
+      <h2 id="titulo-accesos" class="h4 mb-3">Accesos rápidos</h2>
+      <div class="list-group">
+        <a class="list-group-item list-group-item-action" href="productos.html">Gestionar productos</a>
+        <a class="list-group-item list-group-item-action" href="pedidos.html">Ver pedidos</a>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>Panel de administración ArtCrate &middot; Datos de ejemplo</p>
+  <footer class="admin-footer text-center py-3 mt-4">
+    <p class="mb-0">Panel de administración ArtCrate &middot; Datos de ejemplo</p>
   </footer>
 
 

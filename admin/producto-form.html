@@ -17,37 +17,47 @@
 
   <!-- Encabezado del panel de administración (separado del sitio del cliente) -->
   <header>
-    <p>ArtCrate &middot; Administración</p>
-    <nav aria-label="Menú de administración">
-      <ul>
-        <li><a href="index.html">Panel</a></li>
-        <li><a href="productos.html" aria-current="page">Productos</a></li>
-        <li><a href="pedidos.html">Pedidos</a></li>
-        <li><a href="../index.html">Volver a la tienda</a></li>
-      </ul>
+    <!-- Menú superior oscuro: se colapsa con botón hamburguesa bajo 992 px -->
+    <nav class="navbar navbar-expand-lg navbar-dark admin-navbar" aria-label="Menú de administración">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="../assets/img/logo-artcrate-claro.svg" alt="ArtCrate, administración" width="180" height="48">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-admin" aria-controls="menu-admin" aria-expanded="false" aria-label="Mostrar u ocultar el menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu-admin">
+          <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Panel</a></li>
+          <li class="nav-item"><a class="nav-link active" href="productos.html" aria-current="page">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="pedidos.html">Pedidos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html">Volver a la tienda</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <h1>Producto</h1>
-    <p>Este formulario sirve para crear un producto nuevo o editar uno existente. Los campos marcados con * son obligatorios.</p>
+  <main class="container py-4">
+    <h1 class="mb-4">Producto</h1>
+    <p class="mb-4">Este formulario sirve para crear un producto nuevo o editar uno existente. Los campos marcados con * son obligatorios.</p>
 
     <!-- En E1 no guarda nada (la validación llega en el Sprint 4) -->
+    <div class="card formulario-card"><div class="card-body p-4">
     <form action="#" method="post" enctype="multipart/form-data">
-      <fieldset>
-        <legend>Datos del producto</legend>
-
-        <p>
-          <label for="nombre">Nombre *</label><br>
-          <input type="text" id="nombre" name="nombre" required>
-        </p>
-        <p>
-          <label for="sku">SKU *</label><br>
-          <input type="text" id="sku" name="sku" required>
-        </p>
-        <p>
-          <label for="categoria">Categoría *</label><br>
-          <select id="categoria" name="categoria" required>
+      <!-- Grilla de Bootstrap: 2 campos por fila desde 768 px; 1 por fila en móvil -->
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label for="nombre" class="form-label">Nombre *</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" required>
+        </div>
+        <div class="col-md-6">
+          <label for="sku" class="form-label">SKU *</label>
+          <input type="text" class="form-control" id="sku" name="sku" required>
+        </div>
+        <div class="col-md-6">
+          <label for="categoria" class="form-label">Categoría *</label>
+          <select class="form-select" id="categoria" name="categoria" required>
             <option value="">Selecciona una categoría</option>
             <option value="pintura">Pintura</option>
             <option value="dibujo">Dibujo</option>
@@ -55,45 +65,43 @@
             <option value="pinceles-y-accesorios">Pinceles y accesorios</option>
             <option value="kits-artcrate">Kits ArtCrate</option>
           </select>
-        </p>
-        <p>
-          <label for="descripcion">Descripción</label><br>
-          <textarea id="descripcion" name="descripcion" rows="4"></textarea>
-        </p>
-      </fieldset>
-
-      <fieldset>
-        <legend>Precio, stock e imagen</legend>
-
-        <p>
-          <label for="precio">Precio (CLP) *</label><br>
-          <input type="number" id="precio" name="precio" min="1" step="1" required>
-        </p>
-        <p>
-          <label for="stock">Stock *</label><br>
-          <input type="number" id="stock" name="stock" min="0" step="1" required>
-        </p>
-        <p>
-          <label for="imagen">Imagen</label><br>
-          <input type="file" id="imagen" name="imagen" accept=".jpg,.jpeg,.png,.webp">
-        </p>
-        <p>
-          <label for="estado">Estado</label><br>
-          <select id="estado" name="estado">
+        </div>
+        <div class="col-md-6">
+          <label for="estado" class="form-label">Estado</label>
+          <select class="form-select" id="estado" name="estado">
             <option value="activo">Activo</option>
             <option value="inactivo">Inactivo</option>
           </select>
-        </p>
-      </fieldset>
+        </div>
+        <div class="col-12">
+          <label for="descripcion" class="form-label">Descripción</label>
+          <textarea class="form-control" id="descripcion" name="descripcion" rows="4"></textarea>
+        </div>
+        <div class="col-md-6">
+          <label for="precio" class="form-label">Precio (CLP) *</label>
+          <input type="number" class="form-control" id="precio" name="precio" min="1" step="1" required>
+        </div>
+        <div class="col-md-6">
+          <label for="stock" class="form-label">Stock *</label>
+          <input type="number" class="form-control" id="stock" name="stock" min="0" step="1" required>
+        </div>
+        <div class="col-12">
+          <label for="imagen" class="form-label">Imagen</label>
+          <input type="file" class="form-control" id="imagen" name="imagen" accept=".jpg,.jpeg,.png,.webp">
+        </div>
+      </div>
 
-      <button type="submit">Guardar</button>
-      <!-- Cancelar vuelve al listado -->
-      <a href="productos.html">Cancelar</a>
+      <div class="mt-4 d-flex gap-2">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <!-- Cancelar vuelve al listado -->
+        <a class="btn btn-outline-secondary" href="productos.html">Cancelar</a>
+      </div>
     </form>
+    </div></div>
   </main>
 
-  <footer>
-    <p>Panel de administración ArtCrate &middot; Datos de ejemplo</p>
+  <footer class="admin-footer text-center py-3 mt-4">
+    <p class="mb-0">Panel de administración ArtCrate &middot; Datos de ejemplo</p>
   </footer>
 
 

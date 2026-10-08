@@ -206,4 +206,41 @@ legend {
 
 /* ----------------------------------------------------------
    9. PANEL DE ADMINISTRACIÓN (propio + tablas de Bootstrap)
+   El menú oscuro distingue el panel del sitio del cliente.
    ---------------------------------------------------------- */
+/* Se escribe "header .admin-navbar" para que gane sobre "header .navbar" del sitio del cliente */
+header .admin-navbar {
+  background-color: var(--ac-marron);
+  border-bottom: 3px solid var(--ac-terracota);
+}
+
+header .admin-navbar .navbar-brand img {
+  height: 40px;
+  width: auto;
+}
+
+header .admin-navbar .nav-link {
+  color: var(--ac-crema);
+}
+
+header .admin-navbar .nav-link:hover,
+header .admin-navbar .nav-link.active {
+  color: #E9906F;
+}
+
+.admin-footer {
+  color: var(--ac-marron);
+  border-top: 1px solid var(--ac-arena);
+}
+
+/* Indicadores del resumen */
+.tarjeta-indicador {
+  background-color: var(--ac-papel);
+  border-color: var(--ac-arena);
+}
+
+.indicador {
+  font-family: var(--ac-fuente-titulos);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
