@@ -40,26 +40,34 @@
     </nav>
   </header>
 
-  <main>
-    <h1>Ingresar</h1>
+  <main class="container py-5">
+  <!-- Columna centrada: ocupa todo el ancho en móvil y se estrecha en pantallas grandes -->
+  <div class="row justify-content-center">
+  <div class="col-12 col-md-8 col-lg-6">
+    <h1 class="mb-3">Ingresar</h1>
 
     <!-- En E1 el formulario no autentica: la verificación real llega en E3 -->
+    <!-- card de Bootstrap como contenedor del formulario -->
+    <div class="card formulario-card"><div class="card-body p-4">
     <form action="#" method="post">
-      <p>
-        <label for="correo">Correo electrónico</label><br>
-        <input type="email" id="correo" name="correo" autocomplete="email" required>
-      </p>
-      <p>
-        <label for="clave">Contraseña</label><br>
-        <input type="password" id="clave" name="clave" autocomplete="current-password" required>
-      </p>
+      <div class="mb-3">
+          <label for="correo" class="form-label">Correo electrónico</label>
+          <input class="form-control" type="email" id="correo" name="correo" autocomplete="email" required>
+        </div>
+      <div class="mb-3">
+          <label for="clave" class="form-label">Contraseña</label>
+          <input class="form-control" type="password" id="clave" name="clave" autocomplete="current-password" required>
+        </div>
 
-      <button type="submit">Ingresar</button>
+      <button type="submit" class="btn btn-primary w-100">Ingresar</button>
     </form>
+    </div></div>
 
     <!-- Solo elemento visual: sin funcionalidad en E1 -->
     <p><a href="#">¿Olvidaste tu contraseña?</a></p>
-    <p>¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+    <p class="mt-1">¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+  </div>
+  </div>
   </main>
 
   <!-- Pie de página (igual en todas las páginas del cliente) -->

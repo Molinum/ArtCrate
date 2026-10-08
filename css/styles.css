@@ -171,7 +171,34 @@ header .nav-link.active {
 
 /* ----------------------------------------------------------
    7. FORMULARIOS (ajusta los form-control de Bootstrap)
+   Las clases form-control, form-label, form-select y btn vienen
+   de Bootstrap; aquí solo cambiamos colores.
    ---------------------------------------------------------- */
+.formulario-card {
+  background-color: var(--ac-papel);
+  border-color: var(--ac-arena);
+}
+
+.form-control,
+.form-select {
+  background-color: #FFFFFF;
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  border-color: var(--ac-terracota);
+  box-shadow: 0 0 0 0.25rem rgba(196, 98, 63, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: var(--ac-terracota);
+  border-color: var(--ac-terracota);
+}
+
+legend {
+  font-family: var(--ac-fuente-titulos);
+}
 
 /* ----------------------------------------------------------
    8. PREGUNTAS FRECUENTES (ajusta el accordion de Bootstrap)

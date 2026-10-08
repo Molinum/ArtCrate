@@ -40,10 +40,12 @@
     </nav>
   </header>
 
-  <main>
-    <h1>Contacto</h1>
+  <main class="container py-5">
+    <h1 class="mb-4">Contacto</h1>
+    <!-- Grilla: en móvil las dos secciones se apilan; desde 992 px van lado a lado -->
+    <div class="row g-4">
 
-    <section aria-labelledby="titulo-datos">
+    <section class="col-lg-5" aria-labelledby="titulo-datos">
       <h2 id="titulo-datos">Datos de la tienda</h2>
       <address>
         Av. Providencia 1234, Providencia, Santiago<br>
@@ -53,37 +55,40 @@
       <p>Horario de atención: lunes a viernes, de 10:00 a 19:00 h.</p>
     </section>
 
-    <section aria-labelledby="titulo-formulario">
+    <section class="col-lg-7" aria-labelledby="titulo-formulario">
+      <div class="card formulario-card"><div class="card-body p-4">
       <h2 id="titulo-formulario">Envíanos un mensaje</h2>
 
       <!-- En E1 el formulario no envía correos (simulado) -->
       <form action="#" method="post">
-        <p>
-          <label for="nombre">Nombre</label><br>
-          <input type="text" id="nombre" name="nombre" autocomplete="name" required>
-        </p>
-        <p>
-          <label for="correo">Correo electrónico</label><br>
-          <input type="email" id="correo" name="correo" autocomplete="email" required>
-        </p>
-        <p>
-          <label for="asunto">Asunto</label><br>
-          <select id="asunto" name="asunto" required>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input class="form-control" type="text" id="nombre" name="nombre" autocomplete="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="correo" class="form-label">Correo electrónico</label>
+          <input class="form-control" type="email" id="correo" name="correo" autocomplete="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="asunto" class="form-label">Asunto</label>
+          <select class="form-select" id="asunto" name="asunto" required>
             <option value="">Selecciona un asunto</option>
             <option value="consulta-producto">Consulta sobre un producto</option>
             <option value="pedido">Estado de mi pedido</option>
             <option value="devolucion">Cambios y devoluciones</option>
             <option value="otro">Otro</option>
           </select>
-        </p>
-        <p>
-          <label for="mensaje">Mensaje</label><br>
-          <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
-        </p>
+        </div>
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="mensaje" name="mensaje" rows="6" required></textarea>
+        </div>
 
-        <button type="submit">Enviar mensaje</button>
+        <button type="submit" class="btn btn-primary w-100">Enviar mensaje</button>
       </form>
+      </div></div>
     </section>
+    </div>
   </main>
 
   <!-- Pie de página (igual en todas las páginas del cliente) -->
