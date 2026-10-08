@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel | Administración ArtCrate</title>
+</head>
+<body>
+
+  <!-- Encabezado del panel de administración (separado del sitio del cliente) -->
+  <header>
+    <p>ArtCrate &middot; Administración</p>
+    <nav aria-label="Menú de administración">
+      <ul>
+        <li><a href="index.html" aria-current="page">Panel</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="pedidos.html">Pedidos</a></li>
+        <li><a href="../index.html">Volver a la tienda</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Panel de administración</h1>
+
+    <!-- Indicadores de ejemplo (datos estáticos) -->
+    <section aria-labelledby="titulo-resumen">
+      <h2 id="titulo-resumen">Resumen de la tienda</h2>
+      <dl>
+        <dt>Productos</dt>
+        <dd>12</dd>
+        <dt>Pedidos</dt>
+        <dd>8</dd>
+        <dt>Productos con stock bajo</dt>
+        <dd>3</dd>
+      </dl>
+    </section>
+
+    <section aria-labelledby="titulo-accesos">
+      <h2 id="titulo-accesos">Accesos rápidos</h2>
+      <ul>
+        <li><a href="productos.html">Gestionar productos</a></li>
+        <li><a href="pedidos.html">Ver pedidos</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Panel de administración ArtCrate &middot; Datos de ejemplo</p>
+  </footer>
+
+</body>
+</html>
