@@ -184,7 +184,8 @@ header .nav-link.active {
   background-color: var(--ac-arena);
 }
 
-.nav-pills .nav-link:hover {
+.nav-pills .nav-link:hover,
+.nav-pills .nav-link.active {
   background-color: var(--ac-terracota);
   color: #FFFFFF;
 }
