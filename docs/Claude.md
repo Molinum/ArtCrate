@@ -27,3 +27,35 @@ Cuidado con las rutas relativas entre carpetas (../css/styles.css en pages/ y ad
 - Código simple y comentado en español. Soy estudiante y debo poder explicar cada línea en la Review.
   Si usas algo no trivial, explícalo en 1–2 líneas.
 - Si algo del Excel es ambiguo o choca con estas restricciones, pregúntame antes de decidir.
+
+## SPRINT 2
+Lee CLAUDE.md y docs/ArtCrate_Requerimientos_Scrum.xlsx.
+
+Vamos a trabajar el SPRINT 2: estructura con HTML5 semántico (sin diseño todavía).
+Las historias son las que tienen Sprint = 2 en la hoja "Historias de Usuario".
+
+Plan:
+1. Muéstrame un resumen de las historias del Sprint 2 y propón el orden de trabajo. Espera mi OK.
+2. Crea la estructura de carpetas y los archivos HTML vacíos con la plantilla base
+   (doctype, lang="es", meta charset, meta viewport, title). Aún SIN Bootstrap ni CSS.
+3. Implementa las historias de a una, en el orden acordado, cumpliendo sus criterios de aceptación.
+   Reutiliza el mismo <header>/<nav>/<footer> en todas las páginas (copiado a mano, sin JS).
+4. Para las imágenes usa archivos de ejemplo en assets/img (o marcadores de posición locales) con alt descriptivo.
+   Incluye al menos 1 elemento multimedia (video o audio).
+5. Al terminar cada historia, haz el commit y dime qué criterios verificaste.
+6. Al final: revisa que no haya enlaces rotos y que cada página pase el validador W3C.
+
+Recuerda: sin CSS, sin Bootstrap y sin JavaScript en este sprint.
+
+## SPRINT 3
+Lee CLAUDE.md y el Excel. Ahora el SPRINT 3 (CSS externo + Bootstrap, responsive).
+Trabaja las historias con Sprint = 3, una por una, igual que en el Sprint 2.
+Primero integra Bootstrap por CDN y crea css/styles.css con variables en :root.
+No agregues JavaScript propio. Verifica con anchos de 360, 768 y 1366 px, y guarda capturas en docs/capturas/.
+
+## SPRINT 4 
+Lee CLAUDE.md y el Excel. Ahora el SPRINT 4 (validaciones con JavaScript vanilla).
+Trabaja las historias con Sprint = 4, una por una. Los criterios de validación son muy específicos:
+impleméntalos tal cual (mensajes, rangos, formatos). Usa las clases is-invalid / invalid-feedback de Bootstrap.
+La historia del carrito en este sprint es SOLO un documento (docs/diseno-funcional-carrito.md), sin código.
+Al final genera docs/casos-de-prueba.md con casos válidos e inválidos por formulario, vinculados a su HU y criterio.
