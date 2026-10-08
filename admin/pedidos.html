@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pedidos | Administración ArtCrate</title>
+</head>
+<body>
+
+  <!-- Encabezado del panel de administración (separado del sitio del cliente) -->
+  <header>
+    <p>ArtCrate &middot; Administración</p>
+    <nav aria-label="Menú de administración">
+      <ul>
+        <li><a href="index.html">Panel</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="pedidos.html" aria-current="page">Pedidos</a></li>
+        <li><a href="../index.html">Volver a la tienda</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Pedidos</h1>
+
+    <table>
+      <caption>Pedidos recientes (datos de ejemplo)</caption>
+      <thead>
+        <tr>
+          <th scope="col">N.º de pedido</th>
+          <th scope="col">Cliente</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Total</th>
+          <th scope="col">Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">#1001</th>
+          <td>Camila Rojas</td>
+          <td><time datetime="2026-10-02">02-10-2026</time></td>
+          <td>$32.980</td>
+          <td>Entregado</td>
+        </tr>
+        <tr>
+          <th scope="row">#1002</th>
+          <td>Matías Soto</td>
+          <td><time datetime="2026-10-03">03-10-2026</time></td>
+          <td>$12.990</td>
+          <td>Enviado</td>
+        </tr>
+        <tr>
+          <th scope="row">#1003</th>
+          <td>Valentina Pérez</td>
+          <td><time datetime="2026-10-04">04-10-2026</time></td>
+          <td>$54.970</td>
+          <td>Pendiente</td>
+        </tr>
+        <tr>
+          <th scope="row">#1004</th>
+          <td>Diego Fuentes</td>
+          <td><time datetime="2026-10-05">05-10-2026</time></td>
+          <td>$8.990</td>
+          <td>Entregado</td>
+        </tr>
+        <tr>
+          <th scope="row">#1005</th>
+          <td>Javiera Muñoz</td>
+          <td><time datetime="2026-10-06">06-10-2026</time></td>
+          <td>$29.990</td>
+          <td>Enviado</td>
+        </tr>
+        <tr>
+          <th scope="row">#1006</th>
+          <td>Sebastián Vera</td>
+          <td><time datetime="2026-10-07">07-10-2026</time></td>
+          <td>$24.990</td>
+          <td>Pendiente</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>Panel de administración ArtCrate &middot; Datos de ejemplo</p>
+  </footer>
+
+</body>
+</html>
