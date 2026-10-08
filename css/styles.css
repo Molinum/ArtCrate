@@ -125,6 +125,39 @@ header .nav-link.active {
    6. CATÁLOGO Y DETALLE (ajusta las cards de Bootstrap)
    ---------------------------------------------------------- */
 
+/* Las imágenes de las tarjetas son cuadradas y se recortan sin deformarse */
+.tarjeta-producto .card-img-top,
+.tarjeta-categoria .card-img-top {
+  object-fit: cover;
+}
+
+.tarjeta-producto .card-img-top {
+  aspect-ratio: 1 / 1;
+}
+
+/* Efecto al pasar el cursor: la tarjeta sube un poco y proyecta sombra */
+.tarjeta-producto,
+.tarjeta-categoria {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-producto:hover,
+.tarjeta-categoria:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.5rem 1rem rgba(59, 42, 32, 0.2);
+}
+
+/* Botones del índice de categorías del catálogo */
+.nav-pills .nav-link {
+  color: var(--ac-marron);
+  background-color: var(--ac-arena);
+}
+
+.nav-pills .nav-link:hover {
+  background-color: var(--ac-terracota);
+  color: #FFFFFF;
+}
+
 /* ----------------------------------------------------------
    7. FORMULARIOS (ajusta los form-control de Bootstrap)
    ---------------------------------------------------------- */

@@ -40,164 +40,203 @@
     </nav>
   </header>
 
-  <main>
-    <h1>Catálogo de productos</h1>
+  <main class="container py-5">
+    <h1 class="mb-4">Catálogo de productos</h1>
 
     <!-- Índice de categorías: cada enlace lleva a su sección (ancla con id) -->
-    <nav aria-label="Categorías">
-      <h2>Categorías</h2>
-      <ul>
-        <li><a href="#pintura">Pintura</a></li>
-        <li><a href="#dibujo">Dibujo</a></li>
-        <li><a href="#papeles-y-lienzos">Papeles y lienzos</a></li>
-        <li><a href="#pinceles-y-accesorios">Pinceles y accesorios</a></li>
-        <li><a href="#kits-artcrate">Kits ArtCrate</a></li>
+    <nav aria-label="Categorías" class="mb-5">
+      <h2 class="h5">Categorías</h2>
+      <ul class="nav nav-pills gap-2">
+        <li class="nav-item"><a class="nav-link" href="#pintura">Pintura</a></li>
+        <li class="nav-item"><a class="nav-link" href="#dibujo">Dibujo</a></li>
+        <li class="nav-item"><a class="nav-link" href="#papeles-y-lienzos">Papeles y lienzos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pinceles-y-accesorios">Pinceles y accesorios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#kits-artcrate">Kits ArtCrate</a></li>
       </ul>
     </nav>
 
     <!-- Categoría: Pintura -->
-    <section id="pintura" aria-labelledby="titulo-pintura">
-      <h2 id="titulo-pintura">Pintura</h2>
-
-      <article>
-        <a href="producto.html">
-          <img src="../assets/img/producto-01-acrilico-12-colores.svg" alt="Set de pinturas acrílicas de 12 colores" width="300" height="300">
-        </a>
-        <h3>Acrílico 12 colores</h3>
-        <p>Categoría: Pintura</p>
-        <p>$12.990</p>
-        <a href="producto.html">Ver detalle</a>
-      </article>
-
-      <article>
-        <a href="producto.html">
-          <img src="../assets/img/producto-02-oleo-6-tubos.svg" alt="Set de seis tubos de pintura al óleo" width="300" height="300">
-        </a>
-        <h3>Óleo 6 tubos</h3>
-        <p>Categoría: Pintura</p>
-        <p>$18.990</p>
-        <a href="producto.html">Ver detalle</a>
-      </article>
-
-      <article>
-        <a href="producto.html">
-          <img src="../assets/img/producto-03-acuarela-24-pastillas.svg" alt="Caja de acuarela profesional con 24 pastillas" width="300" height="300">
-        </a>
-        <h3>Acuarela 24 pastillas</h3>
-        <p>Categoría: Pintura</p>
-        <p>$24.990</p>
-        <a href="producto.html">Ver detalle</a>
-      </article>
+    <section id="pintura" class="mb-5" aria-labelledby="titulo-pintura">
+      <h2 id="titulo-pintura" class="mb-4">Pintura</h2>
+      <!-- Grilla: 1 columna en móvil, 2 en tablet, 3 en escritorio y 4 en pantallas grandes -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+        <div class="col">
+          <!-- h-100 hace que todas las tarjetas de la fila tengan el mismo alto -->
+          <article class="card h-100 tarjeta-producto">
+            <img src="../assets/img/producto-01-acrilico-12-colores.svg" class="card-img-top" alt="Set de pinturas acrílicas de 12 colores" width="300" height="300">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Acrílico 12 colores</h3>
+              <p class="card-text text-secondary mb-1">Categoría: Pintura</p>
+              <p class="card-text precio">$12.990</p>
+              <a class="btn btn-primary mt-auto" href="producto.html">Ver detalle</a>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <!-- h-100 hace que todas las tarjetas de la fila tengan el mismo alto -->
+          <article class="card h-100 tarjeta-producto">
+            <img src="../assets/img/producto-02-oleo-6-tubos.svg" class="card-img-top" alt="Set de seis tubos de pintura al óleo" width="300" height="300">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Óleo 6 tubos</h3>
+              <p class="card-text text-secondary mb-1">Categoría: Pintura</p>
+              <p class="card-text precio">$18.990</p>
+              <a class="btn btn-primary mt-auto" href="producto.html">Ver detalle</a>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <!-- h-100 hace que todas las tarjetas de la fila tengan el mismo alto -->
+          <article class="card h-100 tarjeta-producto">
+            <img src="../assets/img/producto-03-acuarela-24-pastillas.svg" class="card-img-top" alt="Caja de acuarela profesional con 24 pastillas" width="300" height="300">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Acuarela 24 pastillas</h3>
+              <p class="card-text text-secondary mb-1">Categoría: Pintura</p>
+              <p class="card-text precio">$24.990</p>
+              <a class="btn btn-primary mt-auto" href="producto.html">Ver detalle</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <!-- Categoría: Dibujo -->
-    <section id="dibujo" aria-labelledby="titulo-dibujo">
-      <h2 id="titulo-dibujo">Dibujo</h2>
-
-      <article>
-        <a href="producto.html">
-          <img src="../assets/img/producto-04-lapices-grafito-12.svg" alt="Set de 12 lápices de grafito de distintas durezas" width="300" height="300">
-        </a>
-        <h3>Lápices grafito x12</h3>
-        <p>Categoría: Dibujo</p>
-        <p>$7.990</p>
-        <a href="producto.html">Ver detalle</a>
-      </article>
-
-      <article>
-        <a href="producto.html">
-          <img src="../assets/img/producto-05-carboncillo-difuminos.svg" alt="Barras de carboncillo con difuminos de papel" width="300" height="300">
-        </a>
-        <h3>Carboncillo y difuminos</h3>
-        <p>Categoría: Dibujo</p>
-        <p>$5.990</p>
-        <a href="producto.html">Ver detalle</a>
-      </article>
-
-      <article>
-        <a href="producto.html">
-          <img src="../assets/img/producto-06-marcadores-24.svg" alt="Estuche de 24 marcadores de doble punta" width="300" height="300">
-        </a>
-        <h3>Marcadores x24</h3>
-        <p>Categoría: Dibujo</p>
-        <p>$16.990</p>
-        <a href="producto.html">Ver detalle</a>
-      </article>
+    <section id="dibujo" class="mb-5" aria-labelledby="titulo-dibujo">
+      <h2 id="titulo-dibujo" class="mb-4">Dibujo</h2>
+      <!-- Grilla: 1 columna en móvil, 2 en tablet, 3 en escritorio y 4 en pantallas grandes -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+        <div class="col">
+          <!-- h-100 hace que todas las tarjetas de la fila tengan el mismo alto -->
+          <article class="card h-100 tarjeta-producto">
+            <img src="../assets/img/producto-04-lapices-grafito-12.svg" class="card-img-top" alt="Set de 12 lápices de grafito de distintas durezas" width="300" height="300">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Lápices grafito x12</h3>
+              <p class="card-text text-secondary mb-1">Categoría: Dibujo</p>
+              <p class="card-text precio">$7.990</p>
+              <a class="btn btn-primary mt-auto" href="producto.html">Ver detalle</a>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <!-- h-100 hace que todas las tarjetas de la fila tengan el mismo alto -->
+          <article class="card h-100 tarjeta-producto">
+            <img src="../assets/img/producto-05-carboncillo-difuminos.svg" class="card-img-top" alt="Barras de carboncillo con difuminos de papel" width="300" height="300">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Carboncillo y difuminos</h3>
+              <p class="card-text text-secondary mb-1">Categoría: Dibujo</p>
+              <p class="card-text precio">$5.990</p>
+              <a class="btn btn-primary mt-auto" href="producto.html">Ver detalle</a>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <!-- h-100 hace que todas las tarjetas de la fila tengan el mismo alto -->
+          <article class="card h-100 tarjeta-producto">
+            <img src="../assets/img/producto-06-marcadores-24.svg" class="card-img-top" alt="Estuche de 24 marcadores de doble punta" width="300" height="300">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Marcadores x24</h3>
+              <p class="card-text text-secondary mb-1">Categoría: Dibujo</p>
+              <p class="card-text precio">$16.990</p>
+              <a class="btn btn-primary mt-auto" href="producto.html">Ver detalle</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <!-- Categoría: Papeles y lienzos -->
-    <section id="papeles-y-lienzos" aria-labelledby="titulo-papeles-y-lienzos">
-      <h2 id="titulo-papeles-y-lienzos">Papeles y lienzos</h2>
-
-      <article>
-        <a href="producto.html">
-          <img src="../assets/img/producto-07-lienzo-40x50.svg" alt="Lienzo de algodón de 40 por 50 centímetros" width="300" height="300">
-        </a>
-        <h3>Lienzo 40x50 cm</h3>
-        <p>Categoría: Papeles y lienzos</p>
-        <p>$8.990</p>
-        <a href="producto.html">Ver detalle</a>
-      </article>
-
-      <article>
-        <a href="producto.html">
-          <img src="../assets/img/producto-08-block-acuarela-a4.svg" alt="Block de papel para acuarela de 300 gramos tamaño A4" width="300" height="300">
-        </a>
-        <h3>Block acuarela A4</h3>
-        <p>Categoría: Papeles y lienzos</p>
-        <p>$9.990</p>
-        <a href="producto.html">Ver detalle</a>
-      </article>
-
-      <article>
-        <a href="producto.html">
-          <img src="../assets/img/producto-09-cuaderno-bocetos-a5.svg" alt="Cuaderno de bocetos de tapa dura tamaño A5" width="300" height="300">
-        </a>
-        <h3>Cuaderno de bocetos A5</h3>
-        <p>Categoría: Papeles y lienzos</p>
-        <p>$6.490</p>
-        <a href="producto.html">Ver detalle</a>
-      </article>
+    <section id="papeles-y-lienzos" class="mb-5" aria-labelledby="titulo-papeles-y-lienzos">
+      <h2 id="titulo-papeles-y-lienzos" class="mb-4">Papeles y lienzos</h2>
+      <!-- Grilla: 1 columna en móvil, 2 en tablet, 3 en escritorio y 4 en pantallas grandes -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+        <div class="col">
+          <!-- h-100 hace que todas las tarjetas de la fila tengan el mismo alto -->
+          <article class="card h-100 tarjeta-producto">
+            <img src="../assets/img/producto-07-lienzo-40x50.svg" class="card-img-top" alt="Lienzo de algodón de 40 por 50 centímetros" width="300" height="300">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Lienzo 40x50 cm</h3>
+              <p class="card-text text-secondary mb-1">Categoría: Papeles y lienzos</p>
+              <p class="card-text precio">$8.990</p>
+              <a class="btn btn-primary mt-auto" href="producto.html">Ver detalle</a>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <!-- h-100 hace que todas las tarjetas de la fila tengan el mismo alto -->
+          <article class="card h-100 tarjeta-producto">
+            <img src="../assets/img/producto-08-block-acuarela-a4.svg" class="card-img-top" alt="Block de papel para acuarela de 300 gramos tamaño A4" width="300" height="300">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Block acuarela A4</h3>
+              <p class="card-text text-secondary mb-1">Categoría: Papeles y lienzos</p>
+              <p class="card-text precio">$9.990</p>
+              <a class="btn btn-primary mt-auto" href="producto.html">Ver detalle</a>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <!-- h-100 hace que todas las tarjetas de la fila tengan el mismo alto -->
+          <article class="card h-100 tarjeta-producto">
+            <img src="../assets/img/producto-09-cuaderno-bocetos-a5.svg" class="card-img-top" alt="Cuaderno de bocetos de tapa dura tamaño A5" width="300" height="300">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Cuaderno de bocetos A5</h3>
+              <p class="card-text text-secondary mb-1">Categoría: Papeles y lienzos</p>
+              <p class="card-text precio">$6.490</p>
+              <a class="btn btn-primary mt-auto" href="producto.html">Ver detalle</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <!-- Categoría: Pinceles y accesorios -->
-    <section id="pinceles-y-accesorios" aria-labelledby="titulo-pinceles-y-accesorios">
-      <h2 id="titulo-pinceles-y-accesorios">Pinceles y accesorios</h2>
-
-      <article>
-        <a href="producto.html">
-          <img src="../assets/img/producto-10-set-pinceles-5.svg" alt="Set de cinco pinceles sintéticos de distintas formas" width="300" height="300">
-        </a>
-        <h3>Set de 5 pinceles</h3>
-        <p>Categoría: Pinceles y accesorios</p>
-        <p>$7.490</p>
-        <a href="producto.html">Ver detalle</a>
-      </article>
-
-      <article>
-        <a href="producto.html">
-          <img src="../assets/img/producto-11-caballete-mesa.svg" alt="Caballete de mesa de madera plegable" width="300" height="300">
-        </a>
-        <h3>Caballete de mesa</h3>
-        <p>Categoría: Pinceles y accesorios</p>
-        <p>$21.990</p>
-        <a href="producto.html">Ver detalle</a>
-      </article>
+    <section id="pinceles-y-accesorios" class="mb-5" aria-labelledby="titulo-pinceles-y-accesorios">
+      <h2 id="titulo-pinceles-y-accesorios" class="mb-4">Pinceles y accesorios</h2>
+      <!-- Grilla: 1 columna en móvil, 2 en tablet, 3 en escritorio y 4 en pantallas grandes -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+        <div class="col">
+          <!-- h-100 hace que todas las tarjetas de la fila tengan el mismo alto -->
+          <article class="card h-100 tarjeta-producto">
+            <img src="../assets/img/producto-10-set-pinceles-5.svg" class="card-img-top" alt="Set de cinco pinceles sintéticos de distintas formas" width="300" height="300">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Set de 5 pinceles</h3>
+              <p class="card-text text-secondary mb-1">Categoría: Pinceles y accesorios</p>
+              <p class="card-text precio">$7.490</p>
+              <a class="btn btn-primary mt-auto" href="producto.html">Ver detalle</a>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <!-- h-100 hace que todas las tarjetas de la fila tengan el mismo alto -->
+          <article class="card h-100 tarjeta-producto">
+            <img src="../assets/img/producto-11-caballete-mesa.svg" class="card-img-top" alt="Caballete de mesa de madera plegable" width="300" height="300">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Caballete de mesa</h3>
+              <p class="card-text text-secondary mb-1">Categoría: Pinceles y accesorios</p>
+              <p class="card-text precio">$21.990</p>
+              <a class="btn btn-primary mt-auto" href="producto.html">Ver detalle</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <!-- Categoría: Kits ArtCrate -->
-    <section id="kits-artcrate" aria-labelledby="titulo-kits-artcrate">
-      <h2 id="titulo-kits-artcrate">Kits ArtCrate</h2>
-
-      <article>
-        <a href="producto.html">
-          <img src="../assets/img/producto-12-kit-iniciacion-acrilico.svg" alt="Kit ArtCrate de iniciación en pintura acrílica" width="300" height="300">
-        </a>
-        <h3>Kit Iniciación Acrílico</h3>
-        <p>Categoría: Kits ArtCrate</p>
-        <p>$29.990</p>
-        <a href="producto.html">Ver detalle</a>
-      </article>
+    <section id="kits-artcrate" class="mb-5" aria-labelledby="titulo-kits-artcrate">
+      <h2 id="titulo-kits-artcrate" class="mb-4">Kits ArtCrate</h2>
+      <!-- Grilla: 1 columna en móvil, 2 en tablet, 3 en escritorio y 4 en pantallas grandes -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+        <div class="col">
+          <!-- h-100 hace que todas las tarjetas de la fila tengan el mismo alto -->
+          <article class="card h-100 tarjeta-producto">
+            <img src="../assets/img/producto-12-kit-iniciacion-acrilico.svg" class="card-img-top" alt="Kit ArtCrate de iniciación en pintura acrílica" width="300" height="300">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Kit Iniciación Acrílico</h3>
+              <p class="card-text text-secondary mb-1">Categoría: Kits ArtCrate</p>
+              <p class="card-text precio">$29.990</p>
+              <a class="btn btn-primary mt-auto" href="producto.html">Ver detalle</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
   </main>
 
