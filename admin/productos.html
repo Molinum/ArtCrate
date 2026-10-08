@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Productos | Administración ArtCrate</title>
+</head>
+<body>
+
+  <!-- Encabezado del panel de administración (separado del sitio del cliente) -->
+  <header>
+    <p>ArtCrate &middot; Administración</p>
+    <nav aria-label="Menú de administración">
+      <ul>
+        <li><a href="index.html">Panel</a></li>
+        <li><a href="productos.html" aria-current="page">Productos</a></li>
+        <li><a href="pedidos.html">Pedidos</a></li>
+        <li><a href="../index.html">Volver a la tienda</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Productos</h1>
+    <p><a href="producto-form.html">Nuevo producto</a></p>
+
+    <!-- Los botones Editar y Eliminar son solo visuales en E1 -->
+    <table>
+      <caption>Inventario de productos (datos de ejemplo)</caption>
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Categoría</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Stock</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Acrílico 12 colores</th>
+          <td>Pintura</td>
+          <td>$12.990</td>
+          <td>25</td>
+          <td>
+            <button type="button">Editar</button>
+            <button type="button">Eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Óleo 6 tubos</th>
+          <td>Pintura</td>
+          <td>$18.990</td>
+          <td>14</td>
+          <td>
+            <button type="button">Editar</button>
+            <button type="button">Eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Acuarela 24 pastillas</th>
+          <td>Pintura</td>
+          <td>$24.990</td>
+          <td>8</td>
+          <td>
+            <button type="button">Editar</button>
+            <button type="button">Eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Lápices grafito x12</th>
+          <td>Dibujo</td>
+          <td>$7.990</td>
+          <td>40</td>
+          <td>
+            <button type="button">Editar</button>
+            <button type="button">Eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Marcadores x24</th>
+          <td>Dibujo</td>
+          <td>$16.990</td>
+          <td>3</td>
+          <td>
+            <button type="button">Editar</button>
+            <button type="button">Eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Lienzo 40x50 cm</th>
+          <td>Papeles y lienzos</td>
+          <td>$8.990</td>
+          <td>32</td>
+          <td>
+            <button type="button">Editar</button>
+            <button type="button">Eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Cuaderno de bocetos A5</th>
+          <td>Papeles y lienzos</td>
+          <td>$6.490</td>
+          <td>2</td>
+          <td>
+            <button type="button">Editar</button>
+            <button type="button">Eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Set de 5 pinceles</th>
+          <td>Pinceles y accesorios</td>
+          <td>$7.490</td>
+          <td>18</td>
+          <td>
+            <button type="button">Editar</button>
+            <button type="button">Eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Kit Iniciación Acrílico</th>
+          <td>Kits ArtCrate</td>
+          <td>$29.990</td>
+          <td>5</td>
+          <td>
+            <button type="button">Editar</button>
+            <button type="button">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>Panel de administración ArtCrate &middot; Datos de ejemplo</p>
+  </footer>
+
+</body>
+</html>
