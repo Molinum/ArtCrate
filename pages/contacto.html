@@ -60,28 +60,35 @@
       <h2 id="titulo-formulario">Envíanos un mensaje</h2>
 
       <!-- En E1 el formulario no envía correos (simulado) -->
-      <form action="#" method="post">
+      <!-- Mensaje de éxito simulado: el JavaScript lo muestra cuando todo está correcto -->
+      <div class="alert alert-success d-none" role="status" id="mensaje-exito">¡Mensaje enviado de forma simulada! En esta versión no se envía ningún correo.</div>
+
+      <form novalidate action="#" method="post">
         <div class="mb-3">
           <label for="nombre" class="form-label">Nombre</label>
-          <input class="form-control" type="text" id="nombre" name="nombre" autocomplete="name" required>
+          <input class="form-control" type="text" id="nombre" name="nombre" autocomplete="name" required aria-describedby="error-nombre">
+          <div class="invalid-feedback" id="error-nombre"></div>
         </div>
         <div class="mb-3">
           <label for="correo" class="form-label">Correo electrónico</label>
-          <input class="form-control" type="email" id="correo" name="correo" autocomplete="email" required>
+          <input class="form-control" type="email" id="correo" name="correo" autocomplete="email" required aria-describedby="error-correo">
+          <div class="invalid-feedback" id="error-correo"></div>
         </div>
         <div class="mb-3">
           <label for="asunto" class="form-label">Asunto</label>
-          <select class="form-select" id="asunto" name="asunto" required>
+          <select class="form-select" id="asunto" name="asunto" required aria-describedby="error-asunto">
             <option value="">Selecciona un asunto</option>
             <option value="consulta-producto">Consulta sobre un producto</option>
             <option value="pedido">Estado de mi pedido</option>
             <option value="devolucion">Cambios y devoluciones</option>
             <option value="otro">Otro</option>
           </select>
+          <div class="invalid-feedback" id="error-asunto"></div>
         </div>
         <div class="mb-3">
           <label for="mensaje" class="form-label">Mensaje</label>
-          <textarea class="form-control" id="mensaje" name="mensaje" rows="6" required></textarea>
+          <textarea class="form-control" id="mensaje" name="mensaje" rows="6" required aria-describedby="error-mensaje"></textarea>
+          <div class="invalid-feedback" id="error-mensaje"></div>
         </div>
 
         <button type="submit" class="btn btn-primary w-100">Enviar mensaje</button>
@@ -129,5 +136,8 @@
 
   <!-- JavaScript de Bootstrap (solo para sus componentes); no hay JavaScript propio en este sprint -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-- JavaScript propio: funciones comunes y reglas de este formulario -->
+  <script src="../js/validaciones.js"></script>
+  <script src="../js/contacto.js"></script>
 </body>
 </html>
