@@ -48,6 +48,11 @@ const Validar = {
     return (valor) => (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor.trim()) ? '' : mensaje);
   },
 
+  // Regla genérica: el valor debe cumplir una expresión regular
+  patron(expresion, mensaje) {
+    return (valor) => (expresion.test(valor.trim()) ? '' : mensaje);
+  },
+
   // Junta varias reglas: devuelve el mensaje de la primera que falle
   // (así un campo vacío muestra "Ingresa tu correo" y no el error de formato)
   combinar(...reglas) {
@@ -112,5 +117,9 @@ const Validar = {
       alertaExito.classList.remove('d-none');
       alertaExito.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
+
+    // Devuelve una función para volver a validar un campo desde afuera.
+    // Sirve, por ejemplo, para revisar la confirmación cuando cambia la contraseña.
+    return (id) => validarCampo(document.getElementById(id));
   }
 };
