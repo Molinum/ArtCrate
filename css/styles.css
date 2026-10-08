@@ -88,6 +88,39 @@ header .nav-link.active {
    5. INICIO (propio) - banner y secciones destacadas
    ---------------------------------------------------------- */
 
+/* Banner: imagen de fondo con una capa oscura encima para que el texto blanco se lea bien */
+.hero {
+  background:
+    linear-gradient(rgba(59, 42, 32, 0.7), rgba(59, 42, 32, 0.7)),
+    url("../assets/img/banner-inicio.svg") center / cover no-repeat;
+  color: #FFFFFF;
+}
+
+.hero h1 {
+  color: #FFFFFF;
+  font-size: calc(1.8rem + 1.5vw);
+}
+
+/* Tarjetas de categorías y productos (el aspecto base es de Bootstrap) */
+.tarjeta-categoria,
+.tarjeta-producto {
+  background-color: var(--ac-papel);
+  border-color: var(--ac-arena);
+  overflow: hidden;
+}
+
+.tarjeta-categoria .card-title a,
+.tarjeta-producto .card-title a {
+  color: var(--ac-marron);
+  text-decoration: none;
+}
+
+.precio {
+  color: var(--ac-terracota-oscuro);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
 /* ----------------------------------------------------------
    6. CATÁLOGO Y DETALLE (ajusta las cards de Bootstrap)
    ---------------------------------------------------------- */

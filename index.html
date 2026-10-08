@@ -41,82 +41,108 @@
   </header>
 
   <main>
-    <!-- Presentación de la tienda: único h1 de la página -->
-    <section aria-labelledby="titulo-bienvenida">
-      <h1 id="titulo-bienvenida">ArtCrate, todo para crear tu próxima obra</h1>
-      <p>Pinturas, lienzos, cuadernos de dibujo y accesorios para artistas de todos los niveles.</p>
-      <p><a href="pages/catalogo.html">Ver el catálogo</a></p>
+    <!-- Banner principal: el fondo se define en css/styles.css; único h1 de la página -->
+    <section class="hero py-5" aria-labelledby="titulo-bienvenida">
+      <div class="container py-4">
+        <h1 id="titulo-bienvenida">ArtCrate, todo para crear tu próxima obra</h1>
+        <p class="lead">Pinturas, lienzos, cuadernos de dibujo y accesorios para artistas de todos los niveles.</p>
+        <a class="btn btn-primary btn-lg" href="pages/catalogo.html">Ver el catálogo</a>
+      </div>
     </section>
 
     <!-- Categorías: cada una enlaza a su sección del catálogo (HU-11) -->
-    <section aria-labelledby="titulo-categorias">
-      <h2 id="titulo-categorias">Categorías</h2>
-      <ul>
-        <li>
-          <a href="pages/catalogo.html#pintura">
-            <img src="assets/img/categoria-pintura.svg" alt="Categoría Pintura" width="300" height="200">
-            <span>Pintura</span>
-          </a>
-        </li>
-        <li>
-          <a href="pages/catalogo.html#dibujo">
-            <img src="assets/img/categoria-dibujo.svg" alt="Categoría Dibujo" width="300" height="200">
-            <span>Dibujo</span>
-          </a>
-        </li>
-        <li>
-          <a href="pages/catalogo.html#papeles-y-lienzos">
-            <img src="assets/img/categoria-papeles.svg" alt="Categoría Papeles y lienzos" width="300" height="200">
-            <span>Papeles y lienzos</span>
-          </a>
-        </li>
-        <li>
-          <a href="pages/catalogo.html#pinceles-y-accesorios">
-            <img src="assets/img/categoria-pinceles.svg" alt="Categoría Pinceles y accesorios" width="300" height="200">
-            <span>Pinceles y accesorios</span>
-          </a>
-        </li>
-        <li>
-          <a href="pages/catalogo.html#kits-artcrate">
-            <img src="assets/img/categoria-kits.svg" alt="Categoría Kits ArtCrate" width="300" height="200">
-            <span>Kits ArtCrate</span>
-          </a>
-        </li>
-      </ul>
+    <section class="container py-5" aria-labelledby="titulo-categorias">
+      <h2 id="titulo-categorias" class="mb-4">Categorías</h2>
+      <!-- Grilla de Bootstrap: 1 columna en móvil, 2 en tablet, 5 en escritorio grande -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 g-4">
+        <div class="col">
+          <!-- card de Bootstrap; stretched-link hace clicable toda la tarjeta -->
+          <article class="card h-100 tarjeta-categoria">
+            <img src="assets/img/categoria-pintura.svg" class="card-img-top" alt="Categoría Pintura" width="300" height="200">
+            <div class="card-body">
+              <h3 class="card-title h5"><a class="stretched-link" href="pages/catalogo.html#pintura">Pintura</a></h3>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <!-- card de Bootstrap; stretched-link hace clicable toda la tarjeta -->
+          <article class="card h-100 tarjeta-categoria">
+            <img src="assets/img/categoria-dibujo.svg" class="card-img-top" alt="Categoría Dibujo" width="300" height="200">
+            <div class="card-body">
+              <h3 class="card-title h5"><a class="stretched-link" href="pages/catalogo.html#dibujo">Dibujo</a></h3>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <!-- card de Bootstrap; stretched-link hace clicable toda la tarjeta -->
+          <article class="card h-100 tarjeta-categoria">
+            <img src="assets/img/categoria-papeles.svg" class="card-img-top" alt="Categoría Papeles y lienzos" width="300" height="200">
+            <div class="card-body">
+              <h3 class="card-title h5"><a class="stretched-link" href="pages/catalogo.html#papeles-y-lienzos">Papeles y lienzos</a></h3>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <!-- card de Bootstrap; stretched-link hace clicable toda la tarjeta -->
+          <article class="card h-100 tarjeta-categoria">
+            <img src="assets/img/categoria-pinceles.svg" class="card-img-top" alt="Categoría Pinceles y accesorios" width="300" height="200">
+            <div class="card-body">
+              <h3 class="card-title h5"><a class="stretched-link" href="pages/catalogo.html#pinceles-y-accesorios">Pinceles y accesorios</a></h3>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <!-- card de Bootstrap; stretched-link hace clicable toda la tarjeta -->
+          <article class="card h-100 tarjeta-categoria">
+            <img src="assets/img/categoria-kits.svg" class="card-img-top" alt="Categoría Kits ArtCrate" width="300" height="200">
+            <div class="card-body">
+              <h3 class="card-title h5"><a class="stretched-link" href="pages/catalogo.html#kits-artcrate">Kits ArtCrate</a></h3>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <!-- Productos destacados: cada uno enlaza a su detalle -->
-    <section aria-labelledby="titulo-destacados">
-      <h2 id="titulo-destacados">Productos destacados</h2>
-      <div>
-        <article>
-          <a href="pages/producto.html">
-            <img src="assets/img/producto-01-acrilico-12-colores.svg" alt="Set de pinturas acrílicas de 12 colores" width="300" height="300">
-            <h3>Acrílico 12 colores</h3>
-          </a>
-          <p>$12.990</p>
-        </article>
-        <article>
-          <a href="pages/producto.html">
-            <img src="assets/img/producto-03-acuarela-24-pastillas.svg" alt="Caja de acuarela profesional con 24 pastillas" width="300" height="300">
-            <h3>Acuarela 24 pastillas</h3>
-          </a>
-          <p>$24.990</p>
-        </article>
-        <article>
-          <a href="pages/producto.html">
-            <img src="assets/img/producto-07-lienzo-40x50.svg" alt="Lienzo de algodón de 40 por 50 centímetros" width="300" height="300">
-            <h3>Lienzo 40x50 cm</h3>
-          </a>
-          <p>$8.990</p>
-        </article>
-        <article>
-          <a href="pages/producto.html">
-            <img src="assets/img/producto-12-kit-iniciacion-acrilico.svg" alt="Kit ArtCrate de iniciación en pintura acrílica" width="300" height="300">
-            <h3>Kit Iniciación Acrílico</h3>
-          </a>
-          <p>$29.990</p>
-        </article>
+    <section class="container pb-5" aria-labelledby="titulo-destacados">
+      <h2 id="titulo-destacados" class="mb-4">Productos destacados</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <article class="card h-100 tarjeta-producto">
+            <img src="assets/img/producto-01-acrilico-12-colores.svg" class="card-img-top" alt="Set de pinturas acrílicas de 12 colores" width="300" height="300">
+            <div class="card-body">
+              <h3 class="card-title h5"><a class="stretched-link" href="pages/producto.html">Acrílico 12 colores</a></h3>
+              <p class="card-text precio">$12.990</p>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card h-100 tarjeta-producto">
+            <img src="assets/img/producto-03-acuarela-24-pastillas.svg" class="card-img-top" alt="Caja de acuarela profesional con 24 pastillas" width="300" height="300">
+            <div class="card-body">
+              <h3 class="card-title h5"><a class="stretched-link" href="pages/producto.html">Acuarela 24 pastillas</a></h3>
+              <p class="card-text precio">$24.990</p>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card h-100 tarjeta-producto">
+            <img src="assets/img/producto-07-lienzo-40x50.svg" class="card-img-top" alt="Lienzo de algodón de 40 por 50 centímetros" width="300" height="300">
+            <div class="card-body">
+              <h3 class="card-title h5"><a class="stretched-link" href="pages/producto.html">Lienzo 40x50 cm</a></h3>
+              <p class="card-text precio">$8.990</p>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card h-100 tarjeta-producto">
+            <img src="assets/img/producto-12-kit-iniciacion-acrilico.svg" class="card-img-top" alt="Kit ArtCrate de iniciación en pintura acrílica" width="300" height="300">
+            <div class="card-body">
+              <h3 class="card-title h5"><a class="stretched-link" href="pages/producto.html">Kit Iniciación Acrílico</a></h3>
+              <p class="card-text precio">$29.990</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
   </main>
