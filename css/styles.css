@@ -202,7 +202,16 @@ legend {
 
 /* ----------------------------------------------------------
    8. PREGUNTAS FRECUENTES (ajusta el accordion de Bootstrap)
+   El funcionamiento (abrir y cerrar) lo da Bootstrap;
+   aquí solo cambiamos los colores.
    ---------------------------------------------------------- */
+.accordion {
+  --bs-accordion-bg: var(--ac-papel);
+  --bs-accordion-border-color: var(--ac-arena);
+  --bs-accordion-active-bg: var(--ac-arena);
+  --bs-accordion-active-color: var(--ac-marron);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(196, 98, 63, 0.25);
+}
 
 /* ----------------------------------------------------------
    9. PANEL DE ADMINISTRACIÓN (propio + tablas de Bootstrap)

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Preguntas frecuentes | ArtCrate</title>
+  <meta name="description" content="Preguntas frecuentes de ArtCrate sobre envíos, devoluciones y medios de pago.">
+  <!-- Tipografías (Google Fonts): Playfair Display para títulos e Inter para el texto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;700&display=swap">
+  <!-- Bootstrap 5 (CDN): se carga ANTES que el CSS propio -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- CSS propio de ArtCrate -->
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <!-- Encabezado: logo + navegación principal (igual en todas las páginas del cliente) -->
+  <header>
+    <!-- navbar-expand-lg: bajo 992 px los enlaces se colapsan tras el botón hamburguesa -->
+    <nav class="navbar navbar-expand-lg" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../assets/img/logo-artcrate.svg" alt="ArtCrate, tienda de insumos de arte" width="180" height="48">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Mostrar u ocultar el menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu-principal">
+          <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Ingresar</a></li>
+          <li class="nav-item"><a class="nav-link" href="registro.html">Registrarme</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container py-5">
+    <h1 class="mb-4">Preguntas frecuentes</h1>
+
+    <!-- Acordeón de Bootstrap -->
+    <div class="accordion" id="preguntas">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#respuesta-1" aria-expanded="true" aria-controls="respuesta-1">
+            ¿Cuánto demora el envío de mi pedido?
+          </button>
+        </h2>
+        <!-- data-bs-parent hace que al abrir una respuesta se cierren las demás -->
+        <div id="respuesta-1" class="accordion-collapse collapse show" data-bs-parent="#preguntas">
+          <div class="accordion-body">
+            <p class="text-secondary small mb-1">Envíos</p>
+            Despachamos en 1 a 2 días hábiles. En Santiago la entrega toma de 2 a 3 días hábiles y en regiones de 3 a 6 días hábiles.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#respuesta-2" aria-expanded="false" aria-controls="respuesta-2">
+            ¿Cuánto cuesta el despacho?
+          </button>
+        </h2>
+        <!-- data-bs-parent hace que al abrir una respuesta se cierren las demás -->
+        <div id="respuesta-2" class="accordion-collapse collapse" data-bs-parent="#preguntas">
+          <div class="accordion-body">
+            <p class="text-secondary small mb-1">Envíos</p>
+            El costo depende de tu comuna y del peso del pedido, y se muestra antes de pagar. Las compras sobre $50.000 tienen despacho gratis en la Región Metropolitana.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#respuesta-3" aria-expanded="false" aria-controls="respuesta-3">
+            ¿Puedo devolver un producto?
+          </button>
+        </h2>
+        <!-- data-bs-parent hace que al abrir una respuesta se cierren las demás -->
+        <div id="respuesta-3" class="accordion-collapse collapse" data-bs-parent="#preguntas">
+          <div class="accordion-body">
+            <p class="text-secondary small mb-1">Devoluciones</p>
+            Sí. Tienes 10 días corridos desde la recepción para devolver productos sin uso y en su empaque original.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#respuesta-4" aria-expanded="false" aria-controls="respuesta-4">
+            ¿Qué hago si mi producto llegó dañado?
+          </button>
+        </h2>
+        <!-- data-bs-parent hace que al abrir una respuesta se cierren las demás -->
+        <div id="respuesta-4" class="accordion-collapse collapse" data-bs-parent="#preguntas">
+          <div class="accordion-body">
+            <p class="text-secondary small mb-1">Devoluciones</p>
+            Escríbenos desde la página de Contacto con una foto del producto y el número de tu pedido. Lo reemplazamos o te devolvemos el dinero.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#respuesta-5" aria-expanded="false" aria-controls="respuesta-5">
+            ¿Qué medios de pago aceptan?
+          </button>
+        </h2>
+        <!-- data-bs-parent hace que al abrir una respuesta se cierren las demás -->
+        <div id="respuesta-5" class="accordion-collapse collapse" data-bs-parent="#preguntas">
+          <div class="accordion-body">
+            <p class="text-secondary small mb-1">Medios de pago</p>
+            Aceptamos tarjetas de crédito y débito, y transferencia bancaria.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#respuesta-6" aria-expanded="false" aria-controls="respuesta-6">
+            ¿Es seguro pagar en ArtCrate?
+          </button>
+        </h2>
+        <!-- data-bs-parent hace que al abrir una respuesta se cierren las demás -->
+        <div id="respuesta-6" class="accordion-collapse collapse" data-bs-parent="#preguntas">
+          <div class="accordion-body">
+            <p class="text-secondary small mb-1">Medios de pago</p>
+            Sí. No guardamos los datos de tu tarjeta; el pago se realiza a través de una plataforma de pagos externa.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="mt-4">¿No encuentras tu respuesta? <a href="contacto.html">Escríbenos</a>.</p>
+  </main>
+
+  <!-- Pie de página (igual en todas las páginas del cliente) -->
+  <footer>
+    <section aria-labelledby="pie-contacto">
+      <h2 id="pie-contacto">Contacto</h2>
+      <address>
+        Av. Providencia 1234, Providencia, Santiago<br>
+        <a href="mailto:contacto@artcrate.cl">contacto@artcrate.cl</a><br>
+        <a href="tel:+56912345678">+56 9 1234 5678</a>
+      </address>
+    </section>
+    <nav aria-label="Enlaces del pie de página">
+      <h2>Enlaces útiles</h2>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="faq.html" aria-current="page">Preguntas frecuentes</a></li>
+      </ul>
+    </nav>
+    <section aria-labelledby="pie-redes">
+      <h2 id="pie-redes">Síguenos</h2>
+      <ul>
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </section>
+    <p>&copy; 2026 ArtCrate. Todos los derechos reservados.</p>
+  </footer>
+
+
+  <!-- JavaScript de Bootstrap (solo para sus componentes); no hay JavaScript propio en este sprint -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
