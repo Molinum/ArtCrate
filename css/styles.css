@@ -31,7 +31,9 @@
   --bs-primary: var(--ac-terracota);
   --bs-primary-rgb: 196, 98, 63;
   --bs-link-color: var(--ac-terracota-oscuro);
+  --bs-link-color-rgb: 162, 78, 48;
   --bs-link-hover-color: var(--ac-marron);
+  --bs-link-hover-color-rgb: 59, 42, 32;
 }
 
 /* ----------------------------------------------------------
@@ -81,8 +83,26 @@ header .nav-link.active {
 }
 
 /* ----------------------------------------------------------
-   4. PIE DE PÁGINA (propio)
+   4. PIE DE PÁGINA (propio; usa la grilla de Bootstrap)
    ---------------------------------------------------------- */
+.pie {
+  background-color: var(--ac-marron);
+  color: var(--ac-crema);
+  margin-top: 3rem;
+}
+
+.pie h2 {
+  color: #FFFFFF;
+}
+
+.pie a {
+  color: var(--ac-arena);
+}
+
+.pie a:hover,
+.pie a[aria-current="page"] {
+  color: #E9906F;
+}
 
 /* ----------------------------------------------------------
    5. INICIO (propio) - banner y secciones destacadas

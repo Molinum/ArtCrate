@@ -135,33 +135,38 @@
   </main>
 
   <!-- Pie de página (igual en todas las páginas del cliente) -->
-  <footer>
-    <section aria-labelledby="pie-contacto">
-      <h2 id="pie-contacto">Contacto</h2>
-      <address>
-        Av. Providencia 1234, Providencia, Santiago<br>
-        <a href="mailto:contacto@artcrate.cl">contacto@artcrate.cl</a><br>
-        <a href="tel:+56912345678">+56 9 1234 5678</a>
-      </address>
-    </section>
-    <nav aria-label="Enlaces del pie de página">
-      <h2>Enlaces útiles</h2>
-      <ul>
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="catalogo.html">Catálogo</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="faq.html" aria-current="page">Preguntas frecuentes</a></li>
-      </ul>
-    </nav>
-    <section aria-labelledby="pie-redes">
-      <h2 id="pie-redes">Síguenos</h2>
-      <ul>
-        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
-        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
-      </ul>
-    </section>
-    <p>&copy; 2026 ArtCrate. Todos los derechos reservados.</p>
+  <footer class="pie">
+    <div class="container py-4">
+      <!-- Grilla: 3 columnas desde 768 px; apiladas en móvil -->
+      <div class="row g-4">
+        <section class="col-md-4" aria-labelledby="pie-contacto">
+          <h2 id="pie-contacto" class="h5">Contacto</h2>
+          <address class="mb-0">
+            Av. Providencia 1234, Providencia, Santiago<br>
+            <a href="mailto:contacto@artcrate.cl">contacto@artcrate.cl</a><br>
+            <a href="tel:+56912345678">+56 9 1234 5678</a>
+          </address>
+        </section>
+        <nav class="col-md-4" aria-label="Enlaces del pie de página">
+          <h2 class="h5">Enlaces útiles</h2>
+          <ul class="list-unstyled">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="faq.html" aria-current="page">Preguntas frecuentes</a></li>
+          </ul>
+        </nav>
+        <section class="col-md-4" aria-labelledby="pie-redes">
+          <h2 id="pie-redes" class="h5">Síguenos</h2>
+          <ul class="list-unstyled">
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+          </ul>
+        </section>
+      </div>
+      <p class="text-center small mt-4 mb-0">&copy; 2026 ArtCrate. Todos los derechos reservados.</p>
+    </div>
   </footer>
 
 
