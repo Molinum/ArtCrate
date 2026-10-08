@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro | ArtCrate</title>
+  <meta name="description" content="Crea tu cuenta de cliente en ArtCrate.">
+</head>
+<body>
+
+  <!-- Encabezado: logo + navegación principal (igual en todas las páginas del cliente) -->
+  <header>
+    <a href="../index.html">
+      <img src="../assets/img/logo-artcrate.svg" alt="ArtCrate, tienda de insumos de arte" width="180" height="48">
+    </a>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html">Ingresar</a></li>
+        <li><a href="registro.html" aria-current="page">Registrarme</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Crear cuenta</h1>
+    <p>Los campos marcados con * son obligatorios.</p>
+
+    <!-- En E1 el formulario no envía ni guarda datos (la validación llega en el Sprint 4) -->
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Datos personales</legend>
+
+        <p>
+          <label for="nombre">Nombre *</label><br>
+          <input type="text" id="nombre" name="nombre" autocomplete="given-name" required>
+        </p>
+        <p>
+          <label for="apellido">Apellido *</label><br>
+          <input type="text" id="apellido" name="apellido" autocomplete="family-name" required>
+        </p>
+        <p>
+          <label for="telefono">Teléfono *</label><br>
+          <input type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="+56912345678" required>
+        </p>
+        <p>
+          <label for="region">Región *</label><br>
+          <select id="region" name="region" required>
+          <option value="">Selecciona tu región</option>
+          <option value="Arica y Parinacota">Arica y Parinacota</option>
+          <option value="Tarapacá">Tarapacá</option>
+          <option value="Antofagasta">Antofagasta</option>
+          <option value="Atacama">Atacama</option>
+          <option value="Coquimbo">Coquimbo</option>
+          <option value="Valparaíso">Valparaíso</option>
+          <option value="Metropolitana de Santiago">Metropolitana de Santiago</option>
+          <option value="O&#39;Higgins">O&#39;Higgins</option>
+          <option value="Maule">Maule</option>
+          <option value="Ñuble">Ñuble</option>
+          <option value="Biobío">Biobío</option>
+          <option value="La Araucanía">La Araucanía</option>
+          <option value="Los Ríos">Los Ríos</option>
+          <option value="Los Lagos">Los Lagos</option>
+          <option value="Aysén">Aysén</option>
+          <option value="Magallanes y de la Antártica Chilena">Magallanes y de la Antártica Chilena</option>
+          </select>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Datos de acceso</legend>
+
+        <p>
+          <label for="correo">Correo electrónico *</label><br>
+          <input type="email" id="correo" name="correo" autocomplete="email" placeholder="nombre@dominio.cl" required>
+        </p>
+        <p>
+          <label for="clave">Contraseña *</label><br>
+          <input type="password" id="clave" name="clave" autocomplete="new-password" required>
+        </p>
+        <p>
+          <label for="clave-confirmacion">Confirmar contraseña *</label><br>
+          <input type="password" id="clave-confirmacion" name="clave-confirmacion" autocomplete="new-password" required>
+        </p>
+      </fieldset>
+
+      <p>
+        <input type="checkbox" id="terminos" name="terminos" required>
+        <label for="terminos">Acepto los términos y condiciones *</label>
+      </p>
+
+      <button type="submit">Registrarme</button>
+    </form>
+
+    <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+  </main>
+
+  <!-- Pie de página (igual en todas las páginas del cliente) -->
+  <footer>
+    <section aria-labelledby="pie-contacto">
+      <h2 id="pie-contacto">Contacto</h2>
+      <address>
+        Av. Providencia 1234, Providencia, Santiago<br>
+        <a href="mailto:contacto@artcrate.cl">contacto@artcrate.cl</a><br>
+        <a href="tel:+56912345678">+56 9 1234 5678</a>
+      </address>
+    </section>
+    <nav aria-label="Enlaces del pie de página">
+      <h2>Enlaces útiles</h2>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <section aria-labelledby="pie-redes">
+      <h2 id="pie-redes">Síguenos</h2>
+      <ul>
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </section>
+    <p>&copy; 2026 ArtCrate. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
