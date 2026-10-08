@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ArtCrate | Tienda de insumos de arte</title>
+  <meta name="description" content="ArtCrate: pinturas, lienzos, cuadernos de dibujo y accesorios para artistas.">
+</head>
+<body>
+
+  <!-- Encabezado: logo + navegación principal -->
+  <header>
+    <a href="index.html">
+      <img src="assets/img/logo-artcrate.svg" alt="ArtCrate, tienda de insumos de arte" width="180" height="48">
+    </a>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="pages/catalogo.html">Catálogo</a></li>
+        <li><a href="pages/contacto.html">Contacto</a></li>
+        <li><a href="pages/login.html">Ingresar</a></li>
+        <li><a href="pages/registro.html">Registrarme</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Presentación de la tienda: único h1 de la página -->
+    <section aria-labelledby="titulo-bienvenida">
+      <h1 id="titulo-bienvenida">ArtCrate, todo para crear tu próxima obra</h1>
+      <p>Pinturas, lienzos, cuadernos de dibujo y accesorios para artistas de todos los niveles.</p>
+      <p><a href="pages/catalogo.html">Ver el catálogo</a></p>
+    </section>
+
+    <!-- Categorías: cada una enlaza a su sección del catálogo (HU-11) -->
+    <section aria-labelledby="titulo-categorias">
+      <h2 id="titulo-categorias">Categorías</h2>
+      <ul>
+        <li>
+          <a href="pages/catalogo.html#pintura">
+            <img src="assets/img/categoria-pintura.svg" alt="Categoría Pintura" width="300" height="200">
+            <span>Pintura</span>
+          </a>
+        </li>
+        <li>
+          <a href="pages/catalogo.html#dibujo">
+            <img src="assets/img/categoria-dibujo.svg" alt="Categoría Dibujo" width="300" height="200">
+            <span>Dibujo</span>
+          </a>
+        </li>
+        <li>
+          <a href="pages/catalogo.html#papeles-y-lienzos">
+            <img src="assets/img/categoria-papeles.svg" alt="Categoría Papeles y lienzos" width="300" height="200">
+            <span>Papeles y lienzos</span>
+          </a>
+        </li>
+        <li>
+          <a href="pages/catalogo.html#pinceles-y-accesorios">
+            <img src="assets/img/categoria-pinceles.svg" alt="Categoría Pinceles y accesorios" width="300" height="200">
+            <span>Pinceles y accesorios</span>
+          </a>
+        </li>
+        <li>
+          <a href="pages/catalogo.html#kits-artcrate">
+            <img src="assets/img/categoria-kits.svg" alt="Categoría Kits ArtCrate" width="300" height="200">
+            <span>Kits ArtCrate</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Productos destacados: cada uno enlaza a su detalle -->
+    <section aria-labelledby="titulo-destacados">
+      <h2 id="titulo-destacados">Productos destacados</h2>
+      <div>
+        <article>
+          <a href="pages/producto.html">
+            <img src="assets/img/producto-01-acrilico-12-colores.svg" alt="Set de pinturas acrílicas de 12 colores" width="300" height="300">
+            <h3>Acrílico 12 colores</h3>
+          </a>
+          <p>$12.990</p>
+        </article>
+        <article>
+          <a href="pages/producto.html">
+            <img src="assets/img/producto-03-acuarela-24-pastillas.svg" alt="Caja de acuarela profesional con 24 pastillas" width="300" height="300">
+            <h3>Acuarela 24 pastillas</h3>
+          </a>
+          <p>$24.990</p>
+        </article>
+        <article>
+          <a href="pages/producto.html">
+            <img src="assets/img/producto-07-lienzo-40x50.svg" alt="Lienzo de algodón de 40 por 50 centímetros" width="300" height="300">
+            <h3>Lienzo 40x50 cm</h3>
+          </a>
+          <p>$8.990</p>
+        </article>
+        <article>
+          <a href="pages/producto.html">
+            <img src="assets/img/producto-12-kit-iniciacion-acrilico.svg" alt="Kit ArtCrate de iniciación en pintura acrílica" width="300" height="300">
+            <h3>Kit Iniciación Acrílico</h3>
+          </a>
+          <p>$29.990</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2026 ArtCrate. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
