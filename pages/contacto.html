@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto | ArtCrate</title>
+  <meta name="description" content="Escríbenos a ArtCrate para resolver tus dudas antes de comprar.">
+</head>
+<body>
+
+  <!-- Encabezado: logo + navegación principal (igual en todas las páginas del cliente) -->
+  <header>
+    <a href="../index.html">
+      <img src="../assets/img/logo-artcrate.svg" alt="ArtCrate, tienda de insumos de arte" width="180" height="48">
+    </a>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+        <li><a href="login.html">Ingresar</a></li>
+        <li><a href="registro.html">Registrarme</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contacto</h1>
+
+    <section aria-labelledby="titulo-datos">
+      <h2 id="titulo-datos">Datos de la tienda</h2>
+      <address>
+        Av. Providencia 1234, Providencia, Santiago<br>
+        <a href="mailto:contacto@artcrate.cl">contacto@artcrate.cl</a><br>
+        <a href="tel:+56912345678">+56 9 1234 5678</a>
+      </address>
+      <p>Horario de atención: lunes a viernes, de 10:00 a 19:00 h.</p>
+    </section>
+
+    <section aria-labelledby="titulo-formulario">
+      <h2 id="titulo-formulario">Envíanos un mensaje</h2>
+
+      <!-- En E1 el formulario no envía correos (simulado) -->
+      <form action="#" method="post">
+        <p>
+          <label for="nombre">Nombre</label><br>
+          <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+        </p>
+        <p>
+          <label for="correo">Correo electrónico</label><br>
+          <input type="email" id="correo" name="correo" autocomplete="email" required>
+        </p>
+        <p>
+          <label for="asunto">Asunto</label><br>
+          <select id="asunto" name="asunto" required>
+            <option value="">Selecciona un asunto</option>
+            <option value="consulta-producto">Consulta sobre un producto</option>
+            <option value="pedido">Estado de mi pedido</option>
+            <option value="devolucion">Cambios y devoluciones</option>
+            <option value="otro">Otro</option>
+          </select>
+        </p>
+        <p>
+          <label for="mensaje">Mensaje</label><br>
+          <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+        </p>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Pie de página (igual en todas las páginas del cliente) -->
+  <footer>
+    <section aria-labelledby="pie-contacto">
+      <h2 id="pie-contacto">Contacto</h2>
+      <address>
+        Av. Providencia 1234, Providencia, Santiago<br>
+        <a href="mailto:contacto@artcrate.cl">contacto@artcrate.cl</a><br>
+        <a href="tel:+56912345678">+56 9 1234 5678</a>
+      </address>
+    </section>
+    <nav aria-label="Enlaces del pie de página">
+      <h2>Enlaces útiles</h2>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <section aria-labelledby="pie-redes">
+      <h2 id="pie-redes">Síguenos</h2>
+      <ul>
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </section>
+    <p>&copy; 2026 ArtCrate. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
