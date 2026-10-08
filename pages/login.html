@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ingresar | ArtCrate</title>
+  <meta name="description" content="Inicia sesión en tu cuenta de ArtCrate.">
+</head>
+<body>
+
+  <!-- Encabezado: logo + navegación principal (igual en todas las páginas del cliente) -->
+  <header>
+    <a href="../index.html">
+      <img src="../assets/img/logo-artcrate.svg" alt="ArtCrate, tienda de insumos de arte" width="180" height="48">
+    </a>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html" aria-current="page">Ingresar</a></li>
+        <li><a href="registro.html">Registrarme</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Ingresar</h1>
+
+    <!-- En E1 el formulario no autentica: la verificación real llega en E3 -->
+    <form action="#" method="post">
+      <p>
+        <label for="correo">Correo electrónico</label><br>
+        <input type="email" id="correo" name="correo" autocomplete="email" required>
+      </p>
+      <p>
+        <label for="clave">Contraseña</label><br>
+        <input type="password" id="clave" name="clave" autocomplete="current-password" required>
+      </p>
+
+      <button type="submit">Ingresar</button>
+    </form>
+
+    <!-- Solo elemento visual: sin funcionalidad en E1 -->
+    <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+    <p>¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+  </main>
+
+  <!-- Pie de página (igual en todas las páginas del cliente) -->
+  <footer>
+    <section aria-labelledby="pie-contacto">
+      <h2 id="pie-contacto">Contacto</h2>
+      <address>
+        Av. Providencia 1234, Providencia, Santiago<br>
+        <a href="mailto:contacto@artcrate.cl">contacto@artcrate.cl</a><br>
+        <a href="tel:+56912345678">+56 9 1234 5678</a>
+      </address>
+    </section>
+    <nav aria-label="Enlaces del pie de página">
+      <h2>Enlaces útiles</h2>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <section aria-labelledby="pie-redes">
+      <h2 id="pie-redes">Síguenos</h2>
+      <ul>
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </section>
+    <p>&copy; 2026 ArtCrate. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
