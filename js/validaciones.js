@@ -41,6 +41,13 @@ const Validar = {
     };
   },
 
+  // Formato de correo: algo@dominio.ext, sin espacios.
+  // La expresión regular se lee así: ^ inicio, [^\s@]+ uno o más caracteres que no sean
+  // espacio ni @, luego @, luego otro bloque igual, un punto y otro bloque, $ fin.
+  formatoCorreo(mensaje) {
+    return (valor) => (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor.trim()) ? '' : mensaje);
+  },
+
   // Junta varias reglas: devuelve el mensaje de la primera que falle
   // (así un campo vacío muestra "Ingresa tu correo" y no el error de formato)
   combinar(...reglas) {
