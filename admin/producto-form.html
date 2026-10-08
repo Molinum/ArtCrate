@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulario de producto | Administración ArtCrate</title>
+</head>
+<body>
+
+  <!-- Encabezado del panel de administración (separado del sitio del cliente) -->
+  <header>
+    <p>ArtCrate &middot; Administración</p>
+    <nav aria-label="Menú de administración">
+      <ul>
+        <li><a href="index.html">Panel</a></li>
+        <li><a href="productos.html" aria-current="page">Productos</a></li>
+        <li><a href="pedidos.html">Pedidos</a></li>
+        <li><a href="../index.html">Volver a la tienda</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Producto</h1>
+    <p>Este formulario sirve para crear un producto nuevo o editar uno existente. Los campos marcados con * son obligatorios.</p>
+
+    <!-- En E1 no guarda nada (la validación llega en el Sprint 4) -->
+    <form action="#" method="post" enctype="multipart/form-data">
+      <fieldset>
+        <legend>Datos del producto</legend>
+
+        <p>
+          <label for="nombre">Nombre *</label><br>
+          <input type="text" id="nombre" name="nombre" required>
+        </p>
+        <p>
+          <label for="sku">SKU *</label><br>
+          <input type="text" id="sku" name="sku" required>
+        </p>
+        <p>
+          <label for="categoria">Categoría *</label><br>
+          <select id="categoria" name="categoria" required>
+            <option value="">Selecciona una categoría</option>
+            <option value="pintura">Pintura</option>
+            <option value="dibujo">Dibujo</option>
+            <option value="papeles-y-lienzos">Papeles y lienzos</option>
+            <option value="pinceles-y-accesorios">Pinceles y accesorios</option>
+            <option value="kits-artcrate">Kits ArtCrate</option>
+          </select>
+        </p>
+        <p>
+          <label for="descripcion">Descripción</label><br>
+          <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Precio, stock e imagen</legend>
+
+        <p>
+          <label for="precio">Precio (CLP) *</label><br>
+          <input type="number" id="precio" name="precio" min="1" step="1" required>
+        </p>
+        <p>
+          <label for="stock">Stock *</label><br>
+          <input type="number" id="stock" name="stock" min="0" step="1" required>
+        </p>
+        <p>
+          <label for="imagen">Imagen</label><br>
+          <input type="file" id="imagen" name="imagen" accept=".jpg,.jpeg,.png,.webp">
+        </p>
+        <p>
+          <label for="estado">Estado *</label><br>
+          <select id="estado" name="estado" required>
+            <option value="activo">Activo</option>
+            <option value="inactivo">Inactivo</option>
+          </select>
+        </p>
+      </fieldset>
+
+      <button type="submit">Guardar</button>
+      <!-- Cancelar vuelve al listado -->
+      <a href="productos.html">Cancelar</a>
+    </form>
+  </main>
+
+  <footer>
+    <p>Panel de administración ArtCrate &middot; Datos de ejemplo</p>
+  </footer>
+
+</body>
+</html>
