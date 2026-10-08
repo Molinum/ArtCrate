@@ -7,11 +7,53 @@
 
 /* ----------------------------------------------------------
    1. VARIABLES (propio) - paleta y tipografías
+   Las variables --ac-* son nuestras. Las --bs-* son variables
+   de Bootstrap: al redefinirlas, Bootstrap usa nuestros colores.
    ---------------------------------------------------------- */
+:root {
+  /* Paleta cálida y artesanal */
+  --ac-crema: #F6EFE4;
+  --ac-papel: #FFFFFF;
+  --ac-terracota: #C4623F;
+  --ac-terracota-oscuro: #A24E30;
+  --ac-oliva: #6B7A3A;
+  --ac-marron: #3B2A20;
+  --ac-arena: #E4D8C5;
+
+  /* Tipografías */
+  --ac-fuente-titulos: "Playfair Display", Georgia, serif;
+  --ac-fuente-texto: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Variables de Bootstrap sobrescritas con nuestra paleta */
+  --bs-body-bg: var(--ac-crema);
+  --bs-body-color: var(--ac-marron);
+  --bs-body-font-family: var(--ac-fuente-texto);
+  --bs-primary: var(--ac-terracota);
+  --bs-primary-rgb: 196, 98, 63;
+  --bs-link-color: var(--ac-terracota-oscuro);
+  --bs-link-hover-color: var(--ac-marron);
+}
 
 /* ----------------------------------------------------------
    2. BASE (propio) - estilos generales del sitio
    ---------------------------------------------------------- */
+h1, h2, h3, h4 {
+  font-family: var(--ac-fuente-titulos);
+  color: var(--ac-marron);
+}
+
+/* Botón principal: Bootstrap lo pinta con sus variables --bs-btn-*;
+   aquí las cambiamos por los colores de ArtCrate */
+.btn-primary {
+  --bs-btn-bg: var(--ac-terracota);
+  --bs-btn-border-color: var(--ac-terracota);
+  --bs-btn-hover-bg: var(--ac-terracota-oscuro);
+  --bs-btn-hover-border-color: var(--ac-terracota-oscuro);
+  --bs-btn-active-bg: var(--ac-terracota-oscuro);
+  --bs-btn-active-border-color: var(--ac-terracota-oscuro);
+  --bs-btn-disabled-bg: var(--ac-terracota);
+  --bs-btn-disabled-border-color: var(--ac-terracota);
+}
 
 /* ----------------------------------------------------------
    3. ENCABEZADO Y NAVEGACIÓN (ajusta el navbar de Bootstrap)
