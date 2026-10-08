@@ -18,17 +18,25 @@
 
   <!-- Encabezado: logo + navegación principal (igual en todas las páginas del cliente) -->
   <header>
-    <a href="../index.html">
-      <img src="../assets/img/logo-artcrate.svg" alt="ArtCrate, tienda de insumos de arte" width="180" height="48">
-    </a>
-    <nav aria-label="Navegación principal">
-      <ul>
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="catalogo.html">Catálogo</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="login.html">Ingresar</a></li>
-        <li><a href="registro.html">Registrarme</a></li>
-      </ul>
+    <!-- navbar-expand-lg: bajo 992 px los enlaces se colapsan tras el botón hamburguesa -->
+    <nav class="navbar navbar-expand-lg" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../assets/img/logo-artcrate.svg" alt="ArtCrate, tienda de insumos de arte" width="180" height="48">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Mostrar u ocultar el menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu-principal">
+          <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Ingresar</a></li>
+          <li class="nav-item"><a class="nav-link" href="registro.html">Registrarme</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 

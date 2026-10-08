@@ -57,7 +57,28 @@ h1, h2, h3, h4 {
 
 /* ----------------------------------------------------------
    3. ENCABEZADO Y NAVEGACIÓN (ajusta el navbar de Bootstrap)
+   La estructura y el colapso responsive los da Bootstrap;
+   aquí solo cambiamos colores y bordes.
    ---------------------------------------------------------- */
+header .navbar {
+  background-color: var(--ac-papel);
+  border-bottom: 3px solid var(--ac-terracota);
+}
+
+header .navbar-brand img {
+  height: 40px;
+  width: auto;
+}
+
+header .nav-link {
+  color: var(--ac-marron);
+  font-weight: 600;
+}
+
+header .nav-link:hover,
+header .nav-link.active {
+  color: var(--ac-terracota);
+}
 
 /* ----------------------------------------------------------
    4. PIE DE PÁGINA (propio)
