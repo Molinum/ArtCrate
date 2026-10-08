@@ -107,13 +107,21 @@
         </div>
         <div class="mb-3">
           <label for="clave" class="form-label">Contraseña *</label>
-          <input class="form-control" type="password" id="clave" name="clave" autocomplete="new-password" required aria-describedby="error-clave">
-          <div class="invalid-feedback" id="error-clave"></div>
+          <!-- input-group junta el campo y el botón; has-validation mantiene los bordes al mostrar el error -->
+          <div class="input-group has-validation">
+            <input class="form-control" type="password" id="clave" name="clave" autocomplete="new-password" required aria-describedby="error-clave">
+            <button class="btn btn-outline-secondary" type="button" data-mostrar-clave="clave" aria-controls="clave" aria-pressed="false">Mostrar</button>
+            <div class="invalid-feedback" id="error-clave"></div>
+          </div>
         </div>
         <div class="mb-3">
           <label for="clave-confirmacion" class="form-label">Confirmar contraseña *</label>
-          <input class="form-control" type="password" id="clave-confirmacion" name="clave-confirmacion" autocomplete="new-password" required aria-describedby="error-clave-confirmacion">
-          <div class="invalid-feedback" id="error-clave-confirmacion"></div>
+          <!-- input-group junta el campo y el botón; has-validation mantiene los bordes al mostrar el error -->
+          <div class="input-group has-validation">
+            <input class="form-control" type="password" id="clave-confirmacion" name="clave-confirmacion" autocomplete="new-password" required aria-describedby="error-clave-confirmacion">
+            <button class="btn btn-outline-secondary" type="button" data-mostrar-clave="clave-confirmacion" aria-controls="clave-confirmacion" aria-pressed="false">Mostrar</button>
+            <div class="invalid-feedback" id="error-clave-confirmacion"></div>
+          </div>
         </div>
       </fieldset>
 
@@ -171,6 +179,7 @@
   <!-- JavaScript de Bootstrap (solo para sus componentes); no hay JavaScript propio en este sprint -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <!-- JavaScript propio: funciones comunes y reglas de este formulario -->
+  <script src="../js/mostrar-clave.js"></script>
   <script src="../js/validaciones.js"></script>
   <script src="../js/registro.js"></script>
 </body>
